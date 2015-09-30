@@ -25,6 +25,6 @@ class IPNCall {
         $curl_response = curl_exec($curl);
         var_dump($curl_response);
 
-        curl_close($curl);// testing
+        curl_close($curl);
     }
 }
