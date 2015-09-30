@@ -69,7 +69,7 @@ include("sidebarlinks.php");
              <div class="col-md-1"></div>
              <div class="col-md-9"><br>
              <h2>LOG IN</h2>
-
+			<p>New User SignUp? <a href="maverick-game-user-register">SignUp</a> </p>
              <?php
                 if (isset($_REQUEST['reset'])) {
                     ?>    
@@ -78,10 +78,7 @@ include("sidebarlinks.php");
                 }
                 ?>
              <form action="user_login.php" method="post" id="userLogin" name="userLogin">
-             
-
                   <div class="loginbox">
-                  <p>Already have an account? </p>
                   <div class="row">
                   <div class="col-lg-12">
                   <label>User name/Email</label>
@@ -93,8 +90,9 @@ include("sidebarlinks.php");
                  <input type="password" class="form-control" placeholder="Password" value="" id="password" name="user_password"/> 
                   </div>
 
-             <div class="col-md-4"><input type="submit" value="Submit" name="" class="button large game" /> </div>
-             <div class="col-md-8">
+             <div class="col-md-3"><input type="submit" value="Login" name="" class="button large game" /> </div>
+             <div class="col-md-4"><a href="maverick-game-user-register" class="button large game" style="text-decoration:none">Sign Up</a> </div>
+             <div class="col-md-4">
              <span class="forgetpass"><a href="maverick-forgotpassword" class="forget-popup">Forgot Password?</a></span></div>
              </div>
                   
