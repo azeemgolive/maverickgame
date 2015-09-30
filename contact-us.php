@@ -138,7 +138,7 @@ include("sidebarlinks.php");
     <div class="row">
     <div class="col-md-1 col-sm-1"></div>
      <div class="col-md-9 col-sm-9">
-      <div class="login-wrap contactForm"> 
+      <div class="leader-wrap contactForm" style="min-height:500px;"> 
   <h2>Contact  <span>Us</span></h2>
    <?php
                 if (isset($_REQUEST['thanks'])) {

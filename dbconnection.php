@@ -1106,4 +1106,11 @@ function getGameScoreByUserId($user_id,$game_id)
     $result=  mysql_query($query) or die(mysql_error());
     return $result;
 }
+//-------------------------verify scratch card number---------------------------------------------------------
+function getScratchCardByNumber($scratch_card_number)
+{
+    $query="select card_id,card_number,reference_number,number_of_coins,card_price,isActive,createdAt,expiredAt,cardactivatedAt,isused from maverick_game_card where card_number='$scratch_card_number' and isused='no'";
+    $result=  mysql_query($query) or die(mysql_error());
+    return $result;
+}
 ?>
