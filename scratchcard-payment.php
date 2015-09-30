@@ -47,9 +47,9 @@ include("dbconnection.php");
         <style>
 .error {
 	color: #FF0000;
-	font-size: 11px;
+	font-size: 15px;
 	font-weight: normal;
-	padding-left: 29px;
+	padding-left: 5px;
 }
 .error1 {
 	color: #FF0000;
@@ -127,8 +127,7 @@ include("sidebarlinks.php");
                   <label>Scratch Card Number :</label>
                   <input type="text" class="form-control" placeholder="Enter Scratch Card Number" value="" name="scratch_card_number" id="scratch_card_number"/>
                   </div>
-                  <div class="clearfix"></div><br>                  
-<div class="clearfix"></div><br>
+                  <div class="clearfix"></div>                 
              <div class="col-md-12"><input type="submit" value="Submit" name="" class="button large game" /> </div>
              </div>
            </form>
