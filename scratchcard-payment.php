@@ -66,8 +66,28 @@ include("sidebarlinks.php");
         <h3 class="heading4">How to get a Packages</h3>
         <p class="white">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
 
-        <div class="col-md-4">
-          
+        <div class="col-md-12">
+          <form action="user_login.php" method="post" id="userLogin" name="userLogin">
+             
+
+                  <div class="loginbox">
+                  <div class="row">
+                  <div class="col-lg-12">
+                  <label>Scratch Card Number :</label>
+                  <input type="text" class="form-control" placeholder="Email Address" value="" name="user_email" id="user_email"/>
+                  </div>
+                  <div class="clearfix"></div><br>
+                  <div class="col-lg-12">
+                  <label>Referance Number :</label> 
+                 <input type="password" class="form-control" placeholder="Password" value="" id="password" name="user_password"/> 
+                  </div>
+
+             <div class="col-md-4"><input type="submit" value="Submit" name="" class="button large game" /> </div>
+             
+             </div>
+                  
+            </div>  
+           </form>
         </div>
        
       </div></div>
