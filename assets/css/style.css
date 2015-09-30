@@ -10856,7 +10856,7 @@ transform:translateY(-100%)
 	}
 
 	 }
-.iconhome { position:fixed; right:1px; bottom:413px; background:url(../images/home-icon.png) no-repeat 0 0; display:block; height:41px; width:46px;}
+.iconhome { position:fixed; right:1px; bottom:386px; background:url(../images/home-icon.png) no-repeat 0 0; display:block; height:41px; width:46px;}
 .floating-form-wrap {
   background: #000 url("../images/sid.png") no-repeat 0 0;
   display: none;
@@ -10866,7 +10866,7 @@ transform:translateY(-100%)
   margin-top:-220px;
   position: fixed;
   right: 0;
-  bottom:28px;
+  bottom:0;
   width: 530px;
   cursor:pointer;
   z-index: 999;
