@@ -55,6 +55,7 @@ RewriteRule ^redeem-rewards-points$ redeem_rewards_points.php [L]
 RewriteRule ^highest-leader-board$ highest_leader_board.php [L]
 RewriteRule ^maverick-leader-board$ maverick_leader_board.php [L]
 RewriteRule ^user-game-score$ user-game-score.php [L]
+RewriteRule ^scratch-card-payment$ scratchcard-payment.php [L] 
 
 
 RewriteCond %{HTTP:Accept-encoding} gzip

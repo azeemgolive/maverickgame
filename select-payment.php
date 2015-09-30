@@ -1,14 +1,6 @@
 <?php
 session_start();
 include("dbconnection.php");
-if(isset($_SESSION['user_loged_id']))
-{
-     $user_payements=  getUserById($_SESSION['user_loged_id']);
-     $user_payement=  mysql_fetch_array($user_payements);      
-}else
-{
-    header("location:maverick-game-user-login");
-}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -71,14 +63,28 @@ include("sidebarlinks.php");
           <h2>Payment Method</h2>
           <div class="clearfix"></div>
           <br>
+          <?php
+          if(isset($_SESSION['user_loged_id']))
+          {
+           ?>
           <div class="col-md-4" align="center"> <a id="fmp-button" href="#" rel="478545efd0303c4f7e0d662b26995304?&cuid=<?php echo  $_SESSION['user_loged_id']; ?>"><img src="assets/images/fortumo.jpg" class="img-responsive" alt="Mobile Payments by Fortumo" border="0" /> </a>
             <p class="fo24 white">Through mobile <br/>balance</p>
           </div>
+          <?php
+          }else
+          {
+              ?>
+          <div class="col-md-4" align="center"> <a href="maverick-game-user-login" rel=""><img src="assets/images/fortumo.jpg" class="img-responsive" alt="Mobile Payments by Fortumo" border="0" /> </a>
+            <p class="fo24 white">Through mobile <br/>balance</p>
+          </div>
+          <?php
+          }
+          ?>
           <div class="col-md-4" align="center">
 			<a href="purchase-coins"><img src="assets/images/easypaisa.jpg" class="img-responsive" alt="" /></a>
             <p class="fo24 white">Through <br/>Debit/Credit Card</p>
           </div>
-          <div class="col-md-4" align="center"><a href="scratchcard-payment.php"><img src="assets/images/scratch-card.jpg" class="img-responsive" alt="" /></a>
+          <div class="col-md-4" align="center"><a href="scratch-card-payment"><img src="assets/images/scratch-card.jpg" class="img-responsive" alt="" /></a>
             <p class="fo24 white">Through Scratch <br/>Card</p>
           </div>
         </div>
