@@ -10891,3 +10891,5 @@ transform:translateY(-100%)
     margin: 140px 0 0;
 }
 .comingsoon span { font-weight:400;}
+.newweb { background:#A40101;}
+.newweb p { margin:0 !important; padding:5px 0; text-shadow:0 1px 0 #333;}
