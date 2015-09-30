@@ -1,0 +1,4 @@
+[09-Sep-2015 05:32:57 CST6CDT] PHP Notice:  Undefined index: game_price in /home/maverickgame/public_html/maverick_game_services/update-user-coins.php on line 8
+[09-Sep-2015 05:32:57 CST6CDT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/maverickgame/public_html/maverick_game_services/update-user-coins.php on line 8
+[09-Sep-2015 05:33:04 CST6CDT] PHP Notice:  Undefined index: game_price in /home/maverickgame/public_html/maverick_game_services/update-user-coins.php on line 8
+[09-Sep-2015 05:33:04 CST6CDT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/maverickgame/public_html/maverick_game_services/update-user-coins.php on line 8

@@ -1,0 +1,458 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+
+<title>Devils third</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css' /
+<link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/wow.min.js"></script>
+
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+     <script src="/assets/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<script type="text/javascript" src="/assets/js/html5.js"></script>
+<html lang="en" class="ie ie8">
+<![endif]-->
+
+
+</head>
+
+<body class="game">
+
+<!-- Start popup-->
+
+<!-- Login form -->		
+<div id="login-popup" class="popup">
+    <div class="popup-body">	
+    <span class="popup-exit">X</span>
+
+        <div class="popup-content">
+            	
+
+             <h2>LOG IN</h2>
+             
+             <form action="/">
+             <div class="contact-frm">
+             <p>Already have an account? </p>
+              <p> 
+                  <div class="leftBox">
+                  <label>Email</label>
+                  <input type="text" plzceholder="" value=""/>
+                  </div>
+                  <div class="rightBox">
+                 <label>Password</label>
+                 <input type="password" plzceholder="" value=""/> 
+                 </div>
+                 <span><a href="#">Forgot Password?</a></span>
+              </p>
+              <h3>Sign up Quickly:</h3>
+              <div class="social-media-box">
+                 <img src="assets/images/fb-sign.jpg" width="227" height="37" alt=""> <br>
+                 <img src="assets/images/google-sign.jpg" width="227" height="37" alt="">
+                <span>it's fast and easy to signup with Facebook and google.</span>
+              </div>
+              
+             </div> 
+             <input type="submit" value="Submit"class="submit" /> 
+           </form>
+   
+            
+        </div>
+    </div>
+</div><!-- End Login form -->	
+<!-- signUp form -->    
+<div id="signup-popup" class="popup">
+    <div class="popup-body signupForm">	
+    <span class="popup-exit">X</span>
+
+        <div class="popup-content">
+            	
+
+             <h2>JOIN GAME</h2>
+             <p class="text-center">Already have an account? <a href="#">Login</a></p>
+             
+             <form action="/">
+             <div class="contact-frm nopadd">
+             <h3>Create an account </h3>
+              <p> 
+                  <label>Username</label>
+                  <input type="text" plzceholder="" value=""/>
+               </p>   
+                 
+              <p><label>Password</label>
+                 <input type="password" plzceholder="" value=""/> 
+                
+              </p>
+              <p><label>Confirm Password</label>
+                 <input type="password" plzceholder="" value=""/> 
+                
+                
+              </p>
+              <p><label>Email</label>
+                 <input type="email" plzceholder="" value=""/> 
+                
+              </p>
+              <p><label>Gender</label>
+                 <select>
+                 <option>Select</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                 </select> 
+                
+              </p>
+              <p><label>Birthday</label>
+               <div>  
+                 
+                 <select class="month">
+                 <option>Month</option>
+                  <option>January</option>
+                  <option>Febuary</option>
+                 </select>
+                  <select class="day">
+                 <option>Day</option>
+                  <option>Mondy</option>
+                  <option>Tuesday</option>
+                 </select>
+                  <select class="year">
+                 <option>Year</option>
+                  <option>1990</option>
+                  <option>1991</option>
+                 </select> 
+               </div> 
+              </p>
+              <p><label>Location</label>
+                 <select>
+                 <option>Select</option>
+                  <option>Australia</option>
+                  <option>Pakistan</option>
+                  <option>United state</option>
+                  <option>United Arab Emirates</option>
+                 </select> 
+                
+              </p>
+              
+             </div> 
+             <p class="f-p">&copy; 2015 DEVILS THIRED INC. ALL RIGHTS RESERVED. DEVILS THIRED AND ITS LOGO ARE TRADEMARKS <br> OR REGISTERED TRADE MARKS OF DEVILS THIRED,  INC.
+                    </p><input type="submit" value="Submit"class="submit" /> 
+           </form>
+   
+            
+        </div>
+    </div>
+</div><!-- End signUp form -->
+<div class="popup-overlay"></div>
+
+<!-- End popup-->
+<section class="top-header animated">
+	<div class="container">
+        	<div class="row">
+        	<div class="col-sm-2 col-md-2 col-xs-12 animate-heading">
+            	<ul class="top-left-btn wow bounceInLeft ">
+                	<li class="first last"><a href="javascript:;">Games</a></li>
+                </ul>
+                
+            </div>
+            
+            <div class="top-right-side wow bounceInRight">
+           	<div class="col-sm-3 col-md-5 col-xs-12 animate-heading">
+				<div class="top-search">
+                	<div class="form-group has-feedback">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <i class="glyphicon glyphicon-search form-control-feedback"></i>
+             	   </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-2 col-xs-6 animate-heading">
+            	<ul class="top-login-btn">
+                	
+                	<li class="first" id="popup_window" data-popup-target="#login-popup"><a href="javascript:;">Login</a></li>
+                    <li class="last" id="popup_window" data-popup-target="#signup-popup"><a href="javascript:;">Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-md-3 col-xs-6 animate-heading">
+            	<ul class="social-icons	">
+                	<li class="first"><a class="icon1" href="javascript:;"></a></li>
+                   <li><a class="icon2" href="javascript:;"></a></li>
+                   <li><a class="icon3" href="javascript:;"></a></li>
+                   <li class="last"><a class="icon4" href="javascript:;"></a></li>
+                </ul>
+            
+            </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="hide-dropdown" style="display: none;"><div class="row">
+            <div class="col-md-3 col-sm-3 animate-heading">
+                <div class="f-box">
+                    <h4><strong>Devils Third</strong> Home</h4>
+                     <ul>
+                        <li><a href="javascript:;">Home</a></li>
+                        <li><a href="javascript:;">Forums</a></li>
+                        <li><a href="javascript:;">Support</a></li>
+                        <li><a href="javascript:;">Terms of Service</a></li>
+                        <li><a href="javascript:;">Privacy Policy</a></li>
+                        <li><a href="javascript:;">California Privacy</a></li>
+                    </ul>
+              </div>
+           </div>
+            <div class="col-md-3 col-sm-3 animate-heading">
+                <div class="f-box">
+                    <h4><strong>Devils Third</strong> Home</h4>
+                     <ul>
+                        <li><a href="javascript:;">Home</a></li>
+                        <li><a href="javascript:;">Forums</a></li>
+                        <li><a href="javascript:;">Support</a></li>
+                        <li><a href="javascript:;">Terms of Service</a></li>
+                        <li><a href="javascript:;">Privacy Policy</a></li>
+                        <li><a href="javascript:;">California Privacy</a></li>
+                    </ul>
+              </div>
+           </div>
+            <div class="col-md-3 col-sm-3 animate-heading">
+                <div class="f-box">
+                    <h4><strong>Devils Third</strong> Home</h4>
+                     <ul>
+                        <li><a href="javascript:;">Home</a></li>
+                        <li><a href="javascript:;">Forums</a></li>
+                        <li><a href="javascript:;">Support</a></li>
+                        <li><a href="javascript:;">Terms of Service</a></li>
+                        <li><a href="javascript:;">Privacy Policy</a></li>
+                        <li><a href="javascript:;">California Privacy</a></li>
+                    </ul>
+              </div>
+           </div>
+            <div class="col-md-3 col-sm-3 animate-heading">
+                <div class="f-box">
+                    <h4><strong>Devils Third</strong> Home</h4>
+                     <ul>
+                        <li><a href="javascript:;">Home</a></li>
+                        <li><a href="javascript:;">Forums</a></li>
+                        <li><a href="javascript:;">Support</a></li>
+                        <li><a href="javascript:;">Terms of Service</a></li>
+                        <li><a href="javascript:;">Privacy Policy</a></li>
+                        <li><a href="javascript:;">California Privacy</a></li>
+                    </ul>
+              </div>
+           </div>
+    </div></div>
+        </div>
+    </div>
+</section>
+<section class="header">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-sm-2 col-md-2">
+            	<div class="logo">
+            	<a href="indexdddd.html"><img class="img-responsive" src="assets/images/logo.png" alt="Logo" height="116" width="146"></a>
+                </div>
+            </div>
+            <div class="col-sm-7 col-md-8">
+            	<div class="head-banner">
+            	<a href="javascript:;"><img class="img-responsive" src="assets/images/top-banner.jpg" alt="Header Banner" height="102" width="693"></a>
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-2">
+            <div class="main-menu dt-menu ">
+                <nav role="navigation" class="navbar navbar-inverse">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle collapsed" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collection of nav links, forms, and other content for toggling -->
+                <div id="navbarCollapse" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                    <ul class="nav navbar-nav">
+                         <li ><a href="indexdddd.html">Home</a></li>
+                        <li><a href="about-us.html">About US</a></li>
+                         <li class="active"><a href="gaming-play.html">Games</a></li>
+                          <li><a href="contact-us.html">Contact US</a></li>
+                    </ul>
+                  
+                   
+                </div>
+                </nav>
+			</div>
+  		 </div>
+        </div>
+    </div>
+</section>
+
+<div class="featured-area">
+	<div class="container">
+    <div class="row">
+     <div class="col-md-10 col-sm-9">
+      <div class="gaming-pic"> 
+  <img src="assets/images/game-img.jpg" alt="gaming" height="520" width="1011">
+   
+   
+</div>
+     </div>
+      <div clas="col-md-2 col-sm-3">
+                <div class="right-banner">
+                <a href="javascript:;"><img src="assets/images/right-banner.jpg" alt="adds" height="600" width="160"></a>
+                </div>
+            </div>
+    </div>
+    
+    
+    	<div class="row">
+        	<div class="col-md-12 col-sm-12">
+                
+               <div class="row"> 
+                <div class="col-md-9 col-sm-9 col-xs-12"> 
+                   <div class="drk-box"><h2>Devil's <span>World</span></h2>
+                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus 
+et  magnis thidi is what dis parturient montes, nascetur ridiculus mus. Donec quam felis , ultricies nec . . . 
+<a class="box-btn" href="javascript:;">more Info</a></p>
+                     </div>
+                     <div class="three-box">
+                      
+                    
+                    
+                        <h2>Recent <span>Games</span></h2>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                        	<div class="box wow zoomInUp">
+                             <div class="border-line">
+                                <img src="assets/images/box2.jpg" class="img-responsive" alt="Box Image" height="125" width="221">
+                                </div>
+                                
+                              
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                        	<div class="box wow zoomInDown">
+                            	
+                                <div class="border-line">
+                                <img src="assets/images/box3.jpg" class="img-responsive" alt="Box Image" height="125" width="221">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                        	<div class="box wow zoomInUp">
+                            	
+                                <div class="border-line">
+                                <img src="assets/images/box4.jpg" class="img-responsive" alt="Box Image" height="125" width="221">
+                                </div>
+                                                         </div>
+                        </div>
+                        
+                    </div>
+                 </div>
+                 <div class="col-md-3 col-sm-3 col-xs-12">
+                        	<div ><img src="assets/images/fb-ad.jpg" class="img-responsive" alt="Box Image" height="341" width="386"> </div>
+                                                         </div>
+            	</div>
+                
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+	<div class="container">
+    	<div class="row">
+            <div class="col-md-3 col-sm-3 animate-heading">
+                <div class="f-box wow lightSpeedIn">
+                    <h4><strong>Devils Third</strong> Home</h4>
+                     <ul>
+                        <li><a href="javascript:;">Home</a></li>
+                        <li><a href="javascript:;">Forums</a></li>
+                        <li><a href="javascript:;">Support</a></li>
+                        <li><a href="javascript:;">Terms of Service</a></li>
+                        <li><a href="javascript:;">Privacy Policy</a></li>
+                        <li><a href="javascript:;">California Privacy</a></li>
+                    </ul>
+              </div>
+           </div>
+            <div class="col-md-3 col-sm-3 animate-heading">
+                <div class="f-box wow lightSpeedIn">
+                    <h4><strong>Devils Third</strong> Home</h4>
+                     <ul>
+                        <li><a href="javascript:;">Home</a></li>
+                        <li><a href="javascript:;">Forums</a></li>
+                        <li><a href="javascript:;">Support</a></li>
+                        <li><a href="javascript:;">Terms of Service</a></li>
+                        <li><a href="javascript:;">Privacy Policy</a></li>
+                        <li><a href="javascript:;">California Privacy</a></li>
+                    </ul>
+              </div>
+           </div>
+            <div class="col-md-3 col-sm-3 animate-heading">
+                <div class="f-box wow lightSpeedIn">
+                    <h4><strong>Devils Third</strong> Home</h4>
+                     <ul>
+                        <li><a href="javascript:;">Home</a></li>
+                        <li><a href="javascript:;">Forums</a></li>
+                        <li><a href="javascript:;">Support</a></li>
+                        <li><a href="javascript:;">Terms of Service</a></li>
+                        <li><a href="javascript:;">Privacy Policy</a></li>
+                        <li><a href="javascript:;">California Privacy</a></li>
+                    </ul>
+              </div>
+           </div>
+            <div class="col-md-3 col-sm-3 animate-heading">
+                <div class="f-box wow lightSpeedIn">
+                    <h4><strong>Devils Third</strong> Home</h4>
+                     <ul>
+                        <li><a href="javascript:;">Home</a></li>
+                        <li><a href="javascript:;">Forums</a></li>
+                        <li><a href="javascript:;">Support</a></li>
+                        <li><a href="javascript:;">Terms of Service</a></li>
+                        <li><a href="javascript:;">Privacy Policy</a></li>
+                        <li><a href="javascript:;">California Privacy</a></li>
+                    </ul>
+              </div>
+           </div>
+    </div>
+    	<div class="row">
+    		<div class="f-bottom">
+            	<div class="col-md-2 col-sm-2">
+                	<div class="logo wow zoomInDown">
+            	<a href="indexdddd.html"><img src="assets/images/footer-logo.jpg" alt="Footer Logo" height="111" width="148"></a>
+                </div>
+                </div>
+                <div class="col-md-8 col-sm-7">
+                	<p class="f-p">&copy; 2015 DEVILS THIRED INC. ALL RIGHTS RESERVED. DEVILS THIRED AND ITS LOGO ARE TRADEMARKS <br> OR REGISTERED TRADE MARKS OF DEVILS THIRED,  INC.
+                    </p>
+                </div>
+                <div class="col-md-2 col-sm-3">
+                	<ul class="social-icons	">
+                	<li class="first"><a class="icon1" href="javascript:;"></a></li>
+                   <li><a class="icon2" href="javascript:;"></a></li>
+                   <li><a class="icon3" href="javascript:;"></a></li>
+                   <li class="last"><a class="icon4" href="javascript:;"></a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+</div></footer>
+
+
+
+
+
+
+</body>
+</html>
