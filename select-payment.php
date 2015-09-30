@@ -78,7 +78,7 @@ include("sidebarlinks.php");
 			<a href="purchase-coins"><img src="assets/images/easypaisa.jpg" class="img-responsive" alt="" /></a>
             <p class="fo24 white">Through <br/>Debit/Credit Card</p>
           </div>
-          <div class="col-md-4" align="center"> <img src="assets/images/scratch-card.jpg" class="img-responsive" alt="" />
+          <div class="col-md-4" align="center"><a href="scratchcard-payment.php"><img src="assets/images/scratch-card.jpg" class="img-responsive" alt="" /></a>
             <p class="fo24 white">Through Scratch <br/>Card</p>
           </div>
         </div>
