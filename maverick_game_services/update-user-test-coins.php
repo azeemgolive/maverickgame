@@ -6,11 +6,12 @@ $_SESSION['user_loged_id']=34;
 if(isset($_SESSION['user_loged_id']))
 {
    $user_id       =  34;
-   $utilize_coins =  4;
+   $utilize_coins =  1;
    $result        =  getUserGameCoins($user_id);
    $user_coins    =  mysql_fetch_array($result);
    $total_coins   =  $user_coins['total_coins']-$utilize_coins;
-   updateUtilizeGameCoins($user_id,$utilize_coins,$total_coins);  
+   $total_utilize = $user_coins['utilize_coins']+$utilize_coins;
+   updateUtilizeGameCoins($user_id,$total_utilize,$total_coins);  
     $user_data=array(
         'status'=>'1',
         'success'=>'coins minused'
