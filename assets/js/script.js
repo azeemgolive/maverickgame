@@ -70,5 +70,18 @@ jQuery(document).ready(function ($) {
 
 });//]]> 
 
+/*********fuction for game button*********/
+function purchaseCoins() {
+    window.open("http://www.maverickgame.com/purchase-coins");
+}
+
+function gameLeadeBoard() {
+    window.open("http://www.maverickgame.com/leader-board");
+}
+
+function gamePointsLeadeBoard() {
+    window.open("http://www.maverickgame.com/new-version/game-point-leader-board");
+}
+
 
 
