@@ -11,10 +11,10 @@ return implode(" ", $array);
 ?>
 <section class="slider wow bounceInDown ">
 	<div class="main-container">
-    	<div id="lofslidecontent45" class="lof-slidecontent" style="width:1342px; height:465px;">
+    	<div id="lofslidecontent45" class="lof-slidecontent">
 <div class="preload"><div></div></div>
  <!-- MAIN CONTENT --> 
- <div class="lof-main-outer" style="width:1342px; height:465px;">
+ <div class="lof-main-outer">
   <ul class="lof-main-wapper">
   <?php 
       $slidergames=  getAllGames();
