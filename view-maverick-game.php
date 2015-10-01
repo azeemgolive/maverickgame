@@ -73,7 +73,8 @@ include("caution.php");
 <div class="featured-area">
 	<div class="container">
     <div class="row">
-     <div class="col-md-10 col-sm-9">
+     <div class="col-md-11 col-sm-11">
+     <div class="leader-wrap" style="min-height:650px;">
       <div class="gaming-pic"> 
   <img src="silverhat_games/game_instrustion_image/<?php echo $game_detail['game_instrustion_image'];?>" alt="gaming" height="520" width="1011">
   
@@ -83,7 +84,7 @@ include("caution.php");
   if(isset($_SESSION['user_loged_id']))
   {
   ?>
-  <a href="<?php echo $game_detail['game_file'];?>" onClick="ga('send', 'event', '<?php echo $game_detail["game_name"];  ?>', 'Play <?php echo $game_detail["game_name"];  ?>');">PLAY NOW</a>
+  <a class="button large game" href="<?php echo $game_detail['game_file'];?>" onClick="ga('send', 'event', '<?php echo $game_detail["game_name"];  ?>', 'Play <?php echo $game_detail["game_name"];  ?>');">PLAY NOW</a>
  <?php
   }else
  {
@@ -98,70 +99,40 @@ include("caution.php");
   
   
 </div>
-
-     </div>
-      <?php 
-            include("rightadds.php");
-            ?>
-    </div>
-    
-    
-    	<div class="row">
+	<div class="clearfix"></div><br>
+<br>
+	<div class="row">
         	<div class="col-md-12 col-sm-12">
                 
                <div class="row"> 
-                <div class="col-md-9 col-sm-9 col-xs-12"> 
+                <div class="col-md-12"> 
                   <div class="drk-box"><h2> <?php echo $game_detail['game_name']; ?><span></span></h2>
                      <p><?php echo $game_detail['game_description']; ?>
 </p>
                      </div>
-                     <div class="three-box">
-                      
-                    
-                    
-                        <h2>Maverick  <span>Games</span></h2>
-                        
-                        <?php 
-                        $maverick_games=  getAllViewGames();
-                        if($maverick_games>0)
-                        {
-                            while($maverick_game=  mysql_fetch_array($maverick_games))
-                            {
-                        ?>
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                        	<div class="box wow zoomInUp">
-                             <div class="border-line">
-                                <img src="silverhat_games/game_image/<?php echo $maverick_game['game_image'];?>" class="img-responsive" alt="Box Image" height="125" width="221">
-                                </div>
-                                
-                              
-                            </div>
-                        </div>
-                        <?php
-                        }
-                        }
-                        ?>
-                        
-                        
-                        
-                        
-                    </div>
+                     
                  </div>
-                 <div class="col-md-3 col-sm-3 col-xs-12">
-                     <div class="fb-page" data-href="https://www.facebook.com/game.maverick" data-width="386" data-height="341" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/game.maverick"><a href="https://www.facebook.com/game.maverick">Maverick Game</a></blockquote></div></div>
-                        	
-                                                         </div>
             	</div>
                 
                     
                 </div>
                 
             </div>
+            	<div class="clearfix"></div><br>
+<br>
+		</div>
+     </div>
+    </div>
+    
+    
+    	
             
         </div>
     </div>
 </div>
-
+<?php
+include("footer-toparea.php");
+?>
 <?php 
 include("footer.php");
 

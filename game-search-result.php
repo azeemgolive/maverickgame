@@ -66,11 +66,12 @@ return implode(" ", $array);
 include("sidebarlinks.php");
 ?>
 
-<div class="featured-area">
+<div class="login-area">
 	<div class="container">
     <div class="row">
-     <div class="col-md-10 col-sm-9">
-      <div class="inner-cnt"> 
+    <div class="col-md-1 col-sm-1"></div>
+     <div class="col-md-10 col-sm-10">
+      <div class="leader-wrap" style="min-height:200px;"> 
   <h2>Search  <span>Result</span></h2>
   
   <div class="row">
@@ -90,10 +91,11 @@ include("sidebarlinks.php");
   <div class="border-line">
   <img width="221" height="125" alt="" class="img-responsive" src="silverhat_games/game_image/<?php echo $search_result['game_image']; ?>">
   </div>
+  <div class="clearfix"></div>
   <h3><?php echo $search_result['game_name']; ?></h3>
   <p><?php $mycontent = $search_result['game_description'];
-  echo getWords($mycontent, 21)."..."; ?></span> 
- <a href="view-maverick-game.php?game_id=<?php echo $search_result['game_id'];  ?>">MORE</a></p>
+  echo getWords($mycontent, 18)."..."; ?></span> 
+ <a href="maverick-game-<?php echo $search_result['game_seo'];  ?>">MORE</a></p>
   </div>
   </div>
  <?php
@@ -112,10 +114,11 @@ include("sidebarlinks.php");
   <div class="border-line">
   <img width="221" height="125" alt="" class="img-responsive" src="silverhat_games/game_image/<?php echo $search_result['game_image']; ?>">
   </div>
+  <div class="clearfix"></div>
   <h3><?php echo $search_result['game_name']; ?></h3>
   <p><?php $mycontent = $search_result['game_description'];
-        echo getWords($mycontent, 21)."..."; ?></span> 
- <a href="view-maverick-game.php?game_id=<?php echo $search_result['game_id'];  ?>">MORE</a></p>
+        echo getWords($mycontent, 18)."..."; ?></span> 
+ <a href="maverick-game-<?php echo $search_result['game_seo'];  ?>">MORE</a></p>
   </div>
   </div>
  <?php
@@ -138,19 +141,15 @@ include("sidebarlinks.php");
    
 </div>
      </div>
-      <?php 
-      include("rightadds.php");
-      ?>
     </div>
     
-    
-    	<?php 
-include("featured-games.php");
-?>
+
     </div>
 </div>
 
-
+    	<?php 
+include("footer-toparea.php");
+?>
 
 <?php
 include("footer.php");

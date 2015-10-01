@@ -6155,6 +6155,7 @@ p.f-p {
 	box-shadow: 0 0 20px rgba(255, 0, 0, 1);
 	vertical-align: top;
 	margin-top: 40px;
+	position:relative;
 }
 .gaming-pic img {
 	width: 100%;
@@ -6162,8 +6163,9 @@ p.f-p {
 }
 .game-start {
 	position: absolute;
-	left: 46px;
-	bottom: 3px;
+	left: 0;
+	bottom: -45px;
+	z-index:999;
 }
 .game-start img {
 	width: 151px;
