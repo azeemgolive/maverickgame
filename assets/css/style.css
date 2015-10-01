@@ -7026,7 +7026,11 @@ p.f-p {
 	}*/
 .contact-frm label { font-size:13px; color:#FFF;}
 .contact-frm .form-control { margin:0 0 5px; padding: 6px 2px !important;}
-.about-area { background:url(../images/bg_aboutarea.jpg) no-repeat 0 0;}
+.about-area { background:url(../images/bg_aboutarea.jpg)  no-repeat center center fixed;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
 .login-wrap a { color:#FFF; text-decoration:underline; font-weight:600;} 
 .login-wrap, .leader-area { color:#FFF;} 
 .login-area {
