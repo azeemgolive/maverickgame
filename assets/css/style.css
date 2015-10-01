@@ -10897,3 +10897,10 @@ transform:translateY(-100%)
 .comingsoon span { font-weight:400;}
 .newweb { background:#A40101;}
 .newweb p { margin:0 !important; padding:5px 0; text-shadow:0 1px 0 #333;}
+.bg-furious {
+	background:url(../images/bg_aboutarea.jpg)  no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;	
+}
