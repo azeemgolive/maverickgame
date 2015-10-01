@@ -7,6 +7,7 @@ if(isset($_REQUEST['game_score']))
    $game_score = $_REQUEST['game_score'];
    $user_id = $_SESSION['user_loged_id'];
    $game_id = $_SESSION['game_id'];
+   addNewUserGameScore($user_id,$game_id,$game_score);
    $game_results =  getGameById($game_id);
    $game_result  =  mysql_fetch_array($game_results);
    $game_point_ratio=$game_result['game_point_ratio'];
