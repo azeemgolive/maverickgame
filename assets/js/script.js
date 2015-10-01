@@ -80,7 +80,7 @@ function gameLeadeBoard() {
 }
 
 function gamePointsLeadeBoard() {
-    window.open("http://www.maverickgame.com/new-version/game-point-leader-board");
+    window.open("http://www.maverickgame.com/game-point-leader-board");
 }
 
 
