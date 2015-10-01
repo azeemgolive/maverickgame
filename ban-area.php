@@ -4,7 +4,7 @@
                     <div class="row">
                         <div class="left">
                             <div class="left-banner wow zoomInUp">
-                                <a href="http://thedigitaltraining.com/" target="_blank"><img class="img-responsive" src="assets/images/left-ads.jpg" alt="Left Banner" height="229" width="308"></a>
+                                <img class="img-responsive" src="assets/images/left-ads.jpg" alt="Left Banner" height="229" width="308">
                             </div>
                         </div>
                        

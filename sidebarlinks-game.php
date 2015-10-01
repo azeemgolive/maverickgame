@@ -18,7 +18,7 @@ if(count($links)==2)
             </div>
             <div class="col-lg-7 col-md-8">
             	<div class="head-banner">
-                    <a href="http://thedigitaltraining.com/" target="_blank"><img class="img-responsive" src="../assets/images/digital-training.jpg" alt="Header Banner" height="102" width="693"></a>
+                    <img class="img-responsive" src="../assets/images/digital-training.jpg" alt="Header Banner" height="102" width="693">
                 </div>
             </div>
             <div class="col-lg-3 col-md-2">
