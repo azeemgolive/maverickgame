@@ -40,9 +40,9 @@ if($interval->format('%d')>1)
 <html>
 <head>
 
-<title>Maverick Game - Play the Best Online Games Here for Free!</title>
-<meta content="play games online, best online games, free online games, adventure games, action games, car racing gamees, educational games, role playing games, RPG games, games for pc, online browser games" name="keywords"  />
-<meta content="The best free online games lie within Maverick Game! Play online action, adventure, RPG, racing and educational games for free at Maverick Game!" name="description"/>
+<title>Maverick Game - Play the Most Addicting Games Online!</title>
+<meta content="play games online, best online games, addicting games, arcade games, mmorpg, adventure games, action games, car racing gamees, arcade games, multiplayer games" name="keywords"  />
+<meta content="The most addicting games lie within Maverick Game! Play racing, stunt, cooking, strategy and all types of arcade games here!" name="description"/>
 
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css' >
