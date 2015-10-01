@@ -1,6 +1,15 @@
 <?php
 session_start();
 include("dbconnection.php");
+if(isset($_SESSION['user_loged_id']))
+{
+ $session_id= $_SESSION['user_loged_id'];
+ $user_detail=getUserById($_SESSION['user_loged_id']);
+ $user=  mysql_fetch_array($user_detail);  
+}else
+{
+    header("location:maverick-game-user-login");
+}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -57,10 +66,12 @@ include("sidebarlinks.php");
   <div class="col-md-1 col-sm-1"></div>
     <div class="col-md-9 col-sm-9">
       <div class="leader-wrap" style="min-height:200px;">
-      <div class="col-md-12">
+      
+          
+       <div class="col-md-12">
         <h2>Thnak You</h2>
-        <h3 class="white text-center">You have successfully purchase 50 Coins</h3>
-      </div>
+        <h3 class="white text-center">You have successfully purchase <?php echo $_SESSION['coins']; ?> Coins</h3>
+      </div>      
       </div>
     </div>
 
@@ -68,6 +79,7 @@ include("sidebarlinks.php");
   </div>
 </div>
 <?php
+$_SESSION['coins'] = NULL;
 include("footer-toparea.php");
 ?>
 <?php
