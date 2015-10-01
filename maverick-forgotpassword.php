@@ -63,7 +63,7 @@ include("sidebarlinks.php");
     <div class="row">
     <div class="col-md-1 col-sm-1"></div>
      <div class="col-md-9 col-sm-9">
-     <div class="login-wrap"> 
+     <div class="leader-wrap" style="min-height:250px;"> 
       <div class="col-md-12">
              <h2>Forgot <span>Password</span></h2><br>
                  <?php
@@ -112,18 +112,15 @@ include("sidebarlinks.php");
             
         </div></div>
      </div>
-      <?php 
-            include("rightadds.php");
-            ?>
     </div>
     
     
-    	<?php 
-include("featured-games.php");
-?>
+    	
     </div>
 </div>
-
+<?php 
+include("footer-toparea.php");
+?>
 <?php
 include("footer.php");
 ?>

@@ -50,3 +50,8 @@ if(count($links)==2)
         </div>
     </div>
 </section>
+
+  <div style="clear:both;"></div>
+  <?php 
+include("../caution.php");
+?>

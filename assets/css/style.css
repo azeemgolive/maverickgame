@@ -10904,3 +10904,31 @@ transform:translateY(-100%)
   -o-background-size: cover;
   background-size: cover;	
 }
+.bg-dothedrive  {
+	background:url(../images/bg_loginarea.jpg)  no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;	
+}
+.bg-mastercook {
+	background:url(../images/bg_mastercook.jpg)  no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;	
+}
+.bg-wordster {
+	background:url(../images/bg_wordster.jpg)  no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;	
+}
+.bg-dragon {
+	background:url(../images/bg_leaderarea.jpg)  no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;	
+}

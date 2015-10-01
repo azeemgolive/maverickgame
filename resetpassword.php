@@ -67,11 +67,12 @@ $user=mysql_fetch_array($result);
 include("sidebarlinks.php");
 ?>
 
-<div class="featured-area">
+<div class="leader-area">
     <div class="container">
     <div class="row">
-     <div class="col-md-10 col-sm-9">
-      <div class="inner-cnt"> 
+    <div class="col-md-1"></div>
+     <div class="col-md-9 col-sm-9">
+      <div class="leader-wrap" style="min-height:300px;"> 
              <h2>Forgot <span>Password</span></h2>
              <?php
                 if (isset($_REQUEST['reset'])) {
@@ -82,16 +83,16 @@ include("sidebarlinks.php");
                 ?>
              <div style="width:500px; margin:0 auto;">
              <form action="resetmaverickpassword.php" method="post" id="userLogin" name="userLogin">
-                 <input type="hidden" name="userId" value="<?php echo $user['id']; ?>" />
-                                <input type="hidden" name="email" value="<?php echo $user['email']; ?>" />
-                                <input type="hidden" name="passkey" value="<?php echo $passkey; ?>" />
+                 <input type="hidden" class="form-control" name="userId" value="<?php echo $user['id']; ?>" />
+                                <input type="hidden" class="form-control" name="email" value="<?php echo $user['email']; ?>" />
+                                <input type="hidden" class="form-control" name="passkey" value="<?php echo $passkey; ?>" />
              <div class="contact-frm">
               <p> 
                   <div class="leftBox">
                   <div class="row">
                   <div class="col-lg-12">
                   <label>New Password</label>
-                  <input type="password" plzceholder="Enter your new password" value="" name="password" id="password"/>
+                  <input type="password" class="form-control" plzceholder="Enter your new password" value="" name="password" id="password"/>
                   </div>
                   </div>
                   </div>
@@ -101,38 +102,28 @@ include("sidebarlinks.php");
                   <div class="row">
                   <div class="col-lg-12">
                   <label>Confirm Password</label>
-                  <input type="password" plzceholder="Enter your confirm password" value="" name="confirm_password" id="confirm_password"/>
+                  <input type="password" class="form-control" plzceholder="Enter your confirm password" value="" name="confirm_password" id="confirm_password"/>
                   </div>
                   </div>
                   </div>
              </p>
-             <p>
-             <div class="leftBox">
-                 </div>
-              </p>
-             <input type="submit" value="Submit" class="submit" name="submit" style="color:#fff; margin:20px 73px 0 0; " /> 
+             
+             <input type="submit" value="Submit" class="button large game" name="submit" /> 
            
              </div> 
                  
            </form>
    </div>
    
-   <br/><br/><br/><br/><br/>
             
         </div>
      </div>
-      <?php 
-            include("rightadds.php");
-            ?>
     </div>
-    
-    
-    	<?php 
-include("featured-games.php");
-?>
     </div>
 </div>
-
+<?php 
+include("footer-toparea.php");
+?>
 <?php
 include("footer.php");
 ?>

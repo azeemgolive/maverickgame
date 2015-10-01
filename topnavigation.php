@@ -6,7 +6,7 @@
                         <li><a href="index.php">Home</a></li>
                          <li><a href="game-package-payment">Buy Coins</a></li>
                          <li><a href="leader-board">Game Score</a></li>
-                         <li><a href="maverick-rewards-store">Rewards</a></li>
+                         <li><a href="maverick-game-rewards-store">Rewards</a></li>
                                               
                                            
                     </ul>
