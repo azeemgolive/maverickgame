@@ -18,7 +18,8 @@ if(isset($_SESSION['user_loged_id']))
       mysql_query($query) or die(mysql_error());
       $queryq="update maverick_game_card set isused='yes' where card_id=$card_id";
       mysql_query($queryq) or die(mysql_error());
-      header("location:scratch-card-payment?coins=$scratch_card_coins");      
+      $_SESSION['coins']=$scratch_card_coins;
+      header("location:thanks-scratchcard-payment");      
   }else
   {
       header("location:scratch-card-payment?err");
