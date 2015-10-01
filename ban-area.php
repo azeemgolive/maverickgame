@@ -13,6 +13,6 @@
                             </div>
                         
                         <div class="left">
-                        <img src="assets/images/ban-getcoins.jpg" width="308" height="229" alt=""> </div>
+                        <a href="game-package-payment"><img src="assets/images/ban-getcoins.jpg" width="308" height="229" alt=""> </a></div>
                     </div>
                 </div></div></div>

@@ -59,11 +59,12 @@ include("silverhat-signup.php");
 include("sidebarlinks.php");
 ?>
 
-<div class="featured-area">
+<div class="login-area">
 	<div class="container">
     <div class="row">
-     <div class="col-md-10 col-sm-9">
-      <div class="inner-cnt"> 
+    <div class="col-md-1"></div>
+     <div class="col-md-9 col-sm-9">
+      <div class="leader-wrap" style="min-height:200px;"> 
   <h2>Error  <span></span></h2>
   <?php
   if(isset($_REQUEST['login']))
@@ -84,20 +85,14 @@ include("sidebarlinks.php");
    
 </div>
      </div>
-      <?php 
-      include("rightadds.php");
-      ?>
     </div>
-    
-    
-    	<?php 
-include("featured-games.php");
-?>
     </div>
 </div>
 
 
-
+<?php
+include("footer-toparea.php");
+?>
 <?php
 include("footer.php");
 ?>
