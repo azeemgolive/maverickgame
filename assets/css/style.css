@@ -10934,3 +10934,7 @@ transform:translateY(-100%)
   -o-background-size: cover;
   background-size: cover;	
 }
+.terms a { color:#FFF; font-weight:bold; text-decoration:underline;}
+.terms img { border:1px solid #FFF;}
+.numberlist { list-style:decimal;}
+.numberlist li { color:#FFF;}

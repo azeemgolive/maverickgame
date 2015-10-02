@@ -57,6 +57,7 @@ RewriteRule ^maverick-leader-board$ maverick_leader_board.php [L]
 RewriteRule ^user-game-score$ user-game-score.php [L]
 RewriteRule ^scratch-card-payment$ scratchcard-payment.php [L] 
 RewriteRule ^thanks-scratchcard-payment$ thanks-scratchcard-payment.php [L] 
+RewriteRule ^maverick-faq$ maverickgame-faq.php [L] 
 
 
 RewriteCond %{HTTP:Accept-encoding} gzip
