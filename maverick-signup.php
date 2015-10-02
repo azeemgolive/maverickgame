@@ -188,8 +188,8 @@ if(isset($_POST['submit'])){
 <!-- End popup-->
 
 <?php
-            include("user-login-menus.php");
-            ?>
+ include("user-login-menus.php");
+?>
 <?php
 include("sidebarlinks.php");
 ?>
@@ -544,15 +544,20 @@ include("sidebarlinks.php");
                     <?php } ?>
                     <tr>
                 <td> <div class="row">
-                <div class="col-md-3"><span class="white">Validation code:</span><br>
+                <div class="col-md-3"><label class="white">Validation code:</label><br>
                           <img style="margin:5px 0 0" src="captcha.php?rand=<?php echo rand();?>" id='captchaimg'></div>
-                          <div class="col-md-5"><label for='message'>Enter the code above here :</label>
+                          <div class="col-md-6"><label for='message'>Enter the code above here :</label>
                           
                           <input id="captcha_code" class="form-control" style="width:150px;" name="captcha_code" type="text">
                          
-                          <span class="white">Can't read the image? click <a href='javascript: refreshCaptcha();'>here</a> to refresh.</span></div>
+                          <label>Can't read the image? click <a href='javascript: refreshCaptcha();'>here</a> to refresh.</label></div>
                           
-                          <div class="col-md-4"><br><br><br><input type="submit" value="Submit" class="button large game" name="submit" /></div>
+                          
+                          <div class="clearfix"></div>
+                          <div class="col-md-12"><div class=""><input name="" type="checkbox" value="" checked> <label for='message'>
+I have read and agree to the <a href="terms-conditions">Terms &amp; Conditions</a></label></div></div>
+<div class="clearfix"></div>
+<div class="col-md-12 text-center"><input type="submit" value="Submit" class="button large game" name="submit" /></div>
           </div>
           </td>
           </tr>

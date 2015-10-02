@@ -68,13 +68,13 @@ if($_SESSION['loged_user_image']=="")
     if($user_profile_pic['gender']=="male")
     {
 ?>  
-    <img src="user_images/male.jpg" height="" width=""/>    
+    <a href="maverick-user-profile"><img src="user_images/male.jpg" height="" width=""/></a>   
     <?php
     }
     if($user_profile_pic['gender']=="female")
     {
     ?>
-    <img src="user_images/female.jpg" height="" width=""/>    
+    <a href="maverick-user-profile"><img src="user_images/female.jpg" height="" width=""/></a>   
     <?php
     }
     ?>
@@ -84,16 +84,20 @@ if($_SESSION['loged_user_image']=="")
 }else
 {
 ?>
-    <img src="user_images/<?php echo $user_profile_pic['photo']; ?>" height="" width=""/>
+    <a href="maverick-user-profile"><img src="user_images/<?php echo $user_profile_pic['photo']; ?>" height="" width=""/></a>
 <?php
 }
 ?>
 <div class="user-name">
+<a href="maverick-user-profile">
 <?php
 if(isset($_SESSION['loged_user_name']))echo $_SESSION['loged_user_name'];
 ?>
+</a>
 </div>
-<ul class="user-logout"><li><a href="maverick-user-profile">Settings</a></li><li><a class="first" href="logout.php">Log out</a></li>
+<ul class="user-logout">
+<li><a href="maverick-user-profile">Settings</a></li>
+<li><a class="first" href="logout.php">Log out</a></li>
       </ul>
 </span>
     </div>

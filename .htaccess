@@ -44,6 +44,8 @@ RewriteRule ^user-games-point$ user-games-point.php [L]
 RewriteRule ^game_services/maverick-user-coins$ maverick_game_services/maverick-user-coins.php [L]
 RewriteRule ^game_services/maverick-game-coins$ maverick_game_services/maverick-game-coins.php [L]
 RewriteRule ^game_services/update-user-coins$ maverick_game_services/update-user-coins.php [L]
+RewriteRule ^game_services/user-game-score$ maverick_game_services/maverick-loged-user.php [L]
+RewriteRule ^game_services/test-webservices$ maverick_game_services/test-webservices.php [L]
 RewriteRule ^game-leader-board-(.*)$ game-leader-board.php?id=$1 [L]
 RewriteRule ^game-point-leader-board$ game-points-leader-board.php [L]
 RewriteRule ^game-point-weekly-leader-board$ weekly-leader-board.php [L]
@@ -58,6 +60,10 @@ RewriteRule ^user-game-score$ user-game-score.php [L]
 RewriteRule ^scratch-card-payment$ scratchcard-payment.php [L] 
 RewriteRule ^thanks-scratchcard-payment$ thanks-scratchcard-payment.php [L] 
 RewriteRule ^maverick-faq$ maverickgame-faq.php [L] 
+RewriteRule ^terms-conditions$ terms-and-conditions.php [L] 
+RewriteRule ^maverick-games$ maverick-games.php [L] 
+
+
 
 
 RewriteCond %{HTTP:Accept-encoding} gzip

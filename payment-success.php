@@ -1,6 +1,15 @@
 <?php
 session_start();
 include("dbconnection.php");
+if(isset($_SESSION['user_loged_id']))
+{
+ $session_id= $_SESSION['user_loged_id'];
+ $user_coins=getLogedUserCoins($session_id);
+ $user_coin=  mysql_fetch_array($user_coins);
+}else
+{
+    header("location:maverick-game-user-login");
+}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -54,26 +63,45 @@ include("user-login-menus.php");
 include("sidebarlinks.php");
 ?>
 <div class="leader-area">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-9 col-sm-9">
-        <div class="leader-wrap" style="min-height:400px;">
-          <h2>Payment Success</h2>
-          <div class="coin-icon"><img src="assets/images/rs-100-a.jpg" class="img-responsive" alt="" /></div>
-          <div class="coin-iconhd">Successfully Purchase</div>
-          <p class="coin-text white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br/>
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-        </div>
+<div class="container">
+  <div class="row">
+  <div class="col-md-1 col-sm-1"></div>
+    <div class="col-md-9 col-sm-9">
+      <div class="leader-wrap" style="min-height:200px;">
+      
+          
+       <div class="col-md-12">
+        <h2>Thank You</h2>
+        <h3 class="white text-center">
+            <?php
+            if($user_coin['fortomo_coins']>0)
+            {
+            ?>            
+            You have successfully purchase <?php echo $user_coin['fortomo_coins']; ?> Coins.
+           <?php
+            }else
+            {
+           ?>
+            You have not pay successfully
+         <?php   
+            }
+           ?>
+        
+        </h3>
+      </div>      
       </div>
     </div>
+
+  </div>
   </div>
 </div>
 <?php
+$cuid=$_SESSION['user_loged_id'];
+if($user_coin['fortomo_coins']>0)
+{
+$query="update user_game_coins set fortomo_coins=0 where user_id=$cuid";
+mysql_query($query) or die(mysql_error());
+}
 include("footer-toparea.php");
 ?>
 <?php

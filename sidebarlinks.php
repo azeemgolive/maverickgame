@@ -37,9 +37,11 @@ if(count($links)==2)
                 <div id="navbarCollapse" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
                     <ul class="nav navbar-nav">
                         <li <?php if($seo=="index.php"){ ?> class="active" <?php }?>><a href="index.php">Home</a></li>
+                        <li <?php if($seo=="maverick-games"){ ?> class="active" <?php }?>><a  href="maverick-games">Games</a></li>
                          <li <?php if($seo=="leader-board"){ ?>class="active" <?php }?>><a  href="leader-board">Game Score</a></li>   
                          <li <?php if($seo=="game-package-payment"){ ?>class="active" <?php }?>><a  href="game-package-payment">Buy Coins</a></li>     
                           <li <?php if($seo=="maverick-game-dicussion-forum"){ ?> class="active" <?php }?>><a  href="maverick-game-dicussion-forum">Game Forum</a></li>
+                          
                            <li <?php if($seo=="about-us"){ ?> class="active" <?php }?>><a  href="about-us">About US</a></li>
                            
                     </ul>
