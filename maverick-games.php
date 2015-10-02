@@ -14,11 +14,12 @@ include("dbconnection.php");
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="assets/css/fdw-demo.css" media="all" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/jquery-hover-effect.js"></script>
+<script type="text/javascript" src="assets/js/jquery-hover-effect.js"></script>
 <script src="assets/js/script.js"></script>
 
 <!--[if lt IE 9]>
@@ -48,12 +49,15 @@ include("dbconnection.php");
 	display: block;
 	position: relative;
 }
+.da-thumbs li  img { 
+border:5px solid #900;
+}
 .da-thumbs li  {
 	overflow: hidden;
 }
 .da-thumbs li  article {
 	position: absolute;
-	background-image:url(images/image_hover.png);
+	background-image:url(assets/images/image_hover.png);
 	background-repeat:repeat;
 	width: 100%;
 	height: 100%;
@@ -101,7 +105,8 @@ text-align:center;
 
 .da-thumbs li  article h3{
 color:#fff;
-padding-top:30px;
+padding-top:25px;
+font-style:oblique;
 }
 
 .da-thumbs li  article em{
@@ -118,10 +123,10 @@ span.link_post{
 display:block;
 width:35px;
 height:35px;
-background-color:#DF6232;
+background-color:#A40101;
 border-radius:50px;
 cursor:pointer;
-background-image:url(images/link_post_icon.png);
+background-image:url(assets/images/link_post_icon.png);
 background-repeat:no-repeat;
 background-position:center;
 margin-right:10px;
@@ -132,10 +137,10 @@ overflow:hidden;
 display:block;
 width:35px;
 height:35px;
-background-color:#DF6232;
+background-color:#A40101;
 border-radius:50px;
 cursor:pointer;
-background-image:url(images/zoom_icon.png);
+background-image:url(assets/images/zoom_icon.png);
 background-repeat:no-repeat;
 background-position:center;
 margin-left:10px;
@@ -149,7 +154,6 @@ padding-top:70px !important;
 .image_grid {
 	float:left;
 	overflow:hidden;
-	width:700px;
 	position:relative;
 
 }
@@ -207,66 +211,75 @@ include("sidebarlinks.php");
      <div class="col-md-10">
      <div style="min-height:200px;" class="leader-wrap"> 
   <h2>Maverick Games</h2>
-  
-  <div class="row">
-         
-  <div class="col-md-3">
-<div class="border-line">
-  <img width="200" src="silverhat_games/game_image/dothedive.png" class="img-responsive" alt="">
-</div>
-  <div class="clearfix"></div>
-  <h3>Do The Dive</h3>
-  <p>Skydiving would be so much fun in a calm and nice weather. Imagine, its like flying in the... 
-    <a href="maverick-game-do-the-dive">MORE</a></p>
-  </div>
-    
-  <div class="col-md-3">
-<div class="border-line">
-  <img width="200" src="silverhat_games/game_image/furiousred.png" class="img-responsive" alt="">
-</div>
-  <div class="clearfix"></div>
-  <h3>Furious Red</h3>
-  <p>Either diving, racing or drifting, doesn’t matter what you call it but they are the adrenaline rushing deviations... 
-    <a href="maverick-game-furious-red">MORE</a></p>
-  </div>
-    
-  <div class="col-md-3">
-<div class="border-line">
-  <img width="200" src="silverhat_games/game_image/master-cook.png" class="img-responsive" alt="">
-</div>
-  <div class="clearfix"></div>
-  <h3>Master cook</h3>
-  <p>Girls love cooking as it provides you with the most delicious and amazing meals plus improves the skills... 
-    <a href="maverick-game-master-cook">MORE</a></p>
-  </div>
-    
-  <div class="col-md-3">
-<div class="border-line">
-  <img width="200" src="silverhat_games/game_image/wordster.png" class="img-responsive" alt="">
-</div>
-  <div class="clearfix"></div>
-  <h3>Wordster</h3>
-  <p>Wordster is a word builder game which are popular for helping kids recognize words. In searching for words,... 
-    <a href="maverick-game-word-ster">MORE</a></p>
-  </div>
-    <div class="clearfix"></div><br>
+  <div class="freshdesignweb">     
+<!-- Portfolio 4 Column start -->
+    <div class="image_grid portfolio_4col">
+    <ul id="list" class="portfolio_list da-thumbs">
+    <li>
+            <img width="200" src="silverhat_games/game_image/dothedive.png" class="img-responsive" alt="">
+            <article class="da-animate da-slideFromRight" style="display: block;">
+                <h3>Do The Dive</h3>
+                <em></em>
+                <span class="link_post"><a href="maverick-game-do-the-dive"></a></span>
+                <span class="zoom"><a href="DoTheDive/dothedrive.php"></a></span>
+            </article>
+            <div class="clearfix"></div><br>
+            <h3>Do The Dive</h3>
+        </li>
+        
+        <li>
+             <img width="200" src="silverhat_games/game_image/furiousred.png" class="img-responsive" alt="">
+            <article class="da-animate da-slideFromTop" style="display: block;">
+                <h3>Furious Red</h3>
+                <em></em>
+                <span class="link_post"><a href="maverick-game-furious-red"></a></span>
+                <span class="zoom"><a href="FuriousRed/furiousred.php"></a></span>
+            </article>
+            <div class="clearfix"></div><br>
+            <h3>Furious Red</h3>
+        </li>
+        
+        <li>
+            <img width="200" src="silverhat_games/game_image/master-cook.png" class="img-responsive" alt="">
+            <article class="da-animate da-slideFromLeft" style="display: block;">
+                <h3>Master cook</h3>
+                <em></em>
+                <span class="link_post"><a href="maverick-game-master-cook"></a></span>
+                <span class="zoom"><a href="MasterCook/mastercook.php"></a></span>
+            </article>
+            <div class="clearfix"></div><br>
+            <h3>Master cook</h3>
+        </li>
+        
+        <li>
+            <img width="200" src="silverhat_games/game_image/wordster.png" class="img-responsive" alt="">
+            <article class="da-animate da-slideFromRight" style="display: block;">
+                <h3>Wordster</h3>
+                <em></em>
+                <span class="link_post"><a href="maverick-game-word-ster"></a></span>
+                <span class="zoom"><a href="Wordster/wordster.php"></a></span>
+            </article>
+            <div class="clearfix"></div><br>
+			<h3>Wordster</h3>
+        </li>
+        
+        <li>
+            <img width="200" src="silverhat_games/game_image/dragondraft.png" class="img-responsive" alt="">
+            <article class="da-animate da-slideFromRight" style="display: block;">
+                <h3>Dragon Draft</h3>
+                <em></em>
+                <span class="link_post"><a href="maverick-game-dragon-draft"></a></span>
+                <span class="zoom"><a href="DragonDraft/dragondraft.php"></a></span>
+            </article>
+            <div class="clearfix"></div><br>
+			<h3>Dragon Draft</h3>
+        </li>
 
-  <div class="col-md-3">
-<div class="border-line">
-  <img width="200" src="silverhat_games/game_image/dragondraft.png" class="img-responsive" alt="">
+    </ul>
+    </div>
+    <!-- Portfolio 4 Column End -->
 </div>
-  <div class="clearfix"></div>
-  <h3>Dragon Draft</h3>
-  <p>Did you know the draft game has a history that spans thousands of years? There has been many... 
-    <a href="maverick-game-dragon-draft">MORE</a></p>
-  </div>
-   
   
-  
-  
-
-  
-   </div>
    
 </div>
       
