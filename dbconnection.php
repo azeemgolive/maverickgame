@@ -1113,4 +1113,19 @@ function getScratchCardByNumber($scratch_card_number)
     $result=  mysql_query($query) or die(mysql_error());
     return $result;
 }
+//--------------------------add new user game score---------------------------------------------------------
+function addNewUserGameScore($user_id,$game_id,$user_game_score)
+{
+    $createdAt = date("Y-m-d");
+    $updatedAt = date("Y-m-d");
+    $query="insert into user_game_score(user_id,game_id,createdAt,updatedAt,user_game_score) values($user_id,$game_id,'$createdAt','$updatedAt',$user_game_score)";
+    mysql_query($query) or die(mysql_error());
+}
+//------------------------get logged user fortomo coins----------------------------------------
+function getLogedUserCoins($session_id)
+{
+    $query="select fortomo_coins from user_game_coins where user_id=$session_id";
+    $result=  mysql_query($query) or die(mysql_error());
+    return $result;
+}
 ?>

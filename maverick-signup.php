@@ -106,7 +106,8 @@ if(isset($_POST['submit'])){
                             required: true,
                             digits:true,
                             minlength:11
-                        }
+                        },
+                        agree: "required"
                     },
                     messages: {
                         email: {
@@ -132,7 +133,8 @@ if(isset($_POST['submit'])){
                             required: "Please enter your mobile number",
                             digits: "Mobile number must be in the format of 03212828275",
                             minlength: "Mobile number must only 11 digits"
-                        }
+                        },
+                        agree: "Please accept our policy",
                         
                     }
                 });
@@ -554,7 +556,8 @@ include("sidebarlinks.php");
                           
                           
                           <div class="clearfix"></div>
-                          <div class="col-md-12"><div class=""><input name="" type="checkbox" value="" checked> <label for='message'>
+                          <div class="col-md-12"><div class="">
+                                  <input id="agree" name="agree" type="checkbox"> <label for='message'>
 I have read and agree to the <a href="terms-conditions">Terms &amp; Conditions</a></label></div></div>
 <div class="clearfix"></div>
 <div class="col-md-12 text-center"><input type="submit" value="Submit" class="button large game" name="submit" /></div>
