@@ -73,11 +73,31 @@ function getAllMaverickGames()
   return $result; 
 }
 //---------------------------add new game------------------------------------------------------------
-function addNewGame($game_name,$game_price,$game_points,$game_filename,$game_seo_title,$game_description,$meta_tag_description,$meta_tag_description,$meta_tag_keywords,$game_image,$game_slider_image,$game_home_image,$game_background_image,$game_instrustion_image,$game_seo)
+function addNewGame($game_name,$game_price,$game_points,$game_filename,$game_seo_title,$game_description,$meta_tag_description,$meta_tag_keywords,$game_image,$game_slider_image,$game_home_image,$game_background_image,$game_instrustion_image,$game_seo)
 {
     $createdAt=date("Y-m-d");
     $updatedAt=date("Y-m-d");
     $query="insert into silverhat_games (game_name,game_home_image,game_background_image,game_description,game_price,game_point_ratio,game_file,isActive,createdAt,updatedAt,isFeatured,game_seo,game_seo_title,meta_tag_keywords,meta_tag_description,game_image,game_instrustion_image,game_slider) values('$game_name','$game_home_image','$game_background_image','$game_description',$game_price,$game_points,'$game_filename','yes','$createdAt','$updatedAt','yes','$game_seo','$game_seo_title','$meta_tag_keywords','$meta_tag_description','$game_image','$game_instrustion_image','$game_slider_image')";
+    mysql_query($query) or die(mysql_error());
+}
+//-----------------------get game by id-----------------------------------------------------
+function getGameById($game_id)
+{
+  $query="SELECT game_id, game_name,game_home_image,game_background_image,game_description,game_price,game_point_ratio,game_file,isActive,createdAt,updatedAt,isFeatured,game_seo,game_seo_title,meta_tag_keywords,meta_tag_description,game_image,game_instrustion_image,game_slider FROM silverhat_games where game_id=$game_id";  
+  $result=  mysql_query($query) or die(mysql_error());
+  return $result;  
+}
+//-------------------------update game-------------------------------------------------------
+function updateGame($game_id,$game_name,$game_price,$game_points,$game_filename,$game_seo_title,$game_description,$meta_tag_description,$meta_tag_keywords,$game_image,$game_slider_image,$game_home_image,$game_background_image,$game_instrustion_image,$game_seo)
+{
+   $updatedAt=date("Y-m-d"); 
+   $query="update silverhat_games set game_name='$game_name',game_home_image='$game_home_image',game_background_image='$game_background_image',game_description='$game_description',game_price=$game_price,game_point_ratio=$game_points,game_file='$game_filename',updatedAt='$updatedAt',game_seo='$game_seo',game_seo_title='$game_seo_title',meta_tag_keywords='$meta_tag_keywords',meta_tag_description='$meta_tag_description',game_image='$game_image',game_instrustion_image='$game_instrustion_image',game_slider='$game_slider_image' where game_id=$game_id";
+    mysql_query($query) or die(mysql_error());
+}
+//------------------------------delete game--------------------------------------------------
+function deleteGame($game_id)
+{
+    $query="delete from silverhat_games where game_id=$game_id";
     mysql_query($query) or die(mysql_error());
 }
 ?>
