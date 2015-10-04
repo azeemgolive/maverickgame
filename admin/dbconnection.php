@@ -65,4 +65,19 @@ function deleteRewards($reward_id)
     $query="delete from maverick_game_reward where reward_id=$reward_id";
     mysql_query($query) or die(mysql_error());
 }
+//-----------------------------get All Maverick Games---------------------------------------------------------
+function getAllMaverickGames()
+{
+  $query="SELECT game_id, game_name, game_price, game_point_ratio FROM silverhat_games order by game_id";  
+  $result=  mysql_query($query) or die(mysql_error());
+  return $result; 
+}
+//---------------------------add new game------------------------------------------------------------
+function addNewGame($game_name,$game_price,$game_points,$game_filename,$game_seo_title,$game_description,$meta_tag_description,$meta_tag_description,$meta_tag_keywords,$game_image,$game_slider_image,$game_home_image,$game_background_image,$game_instrustion_image,$game_seo)
+{
+    $createdAt=date("Y-m-d");
+    $updatedAt=date("Y-m-d");
+    $query="insert into silverhat_games (game_name,game_home_image,game_background_image,game_description,game_price,game_point_ratio,game_file,isActive,createdAt,updatedAt,isFeatured,game_seo,game_seo_title,meta_tag_keywords,meta_tag_description,game_image,game_instrustion_image,game_slider) values('$game_name','$game_home_image','$game_background_image','$game_description',$game_price,$game_points,'$game_filename','yes','$createdAt','$updatedAt','yes','$game_seo','$game_seo_title','$meta_tag_keywords','$meta_tag_description','$game_image','$game_instrustion_image','$game_slider_image')";
+    mysql_query($query) or die(mysql_error());
+}
 ?>
