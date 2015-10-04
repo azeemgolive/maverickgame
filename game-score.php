@@ -67,6 +67,7 @@ include("sidebarlinks.php");
     <div class="leader-wrap">
     <div class="col-md-12">  
         <h2>leaderboard</h2>
+        <p class="white">You're Achievements! <br>Click on game name to see your score and rank, click on Point Leaderboard to view your points.</p>
     <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-3">

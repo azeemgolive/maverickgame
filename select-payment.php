@@ -61,6 +61,8 @@ include("sidebarlinks.php");
       <div class="col-md-9 col-sm-9">
         <div class="leader-wrap" style="min-height:300px;">
           <h2>Payment Method</h2>
+          
+          <p class="white">Coins are required to play Games and earn reward points. Choose the payment method that is most convenient to you. <br><strong>1 Coin is for Rs.5.</strong></p>
           <div class="clearfix"></div>
           <br>
           <?php
@@ -69,6 +71,7 @@ include("sidebarlinks.php");
            ?>
           <div class="col-md-4" align="center"> <a id="fmp-button" href="#" rel="478545efd0303c4f7e0d662b26995304?&cuid=<?php echo  $_SESSION['user_loged_id']; ?>"><img src="assets/images/fortumo.jpg" class="img-responsive" alt="Mobile Payments by Fortumo" border="0" /> </a>
             <p class="fo24 white">Through mobile <br/>balance</p>
+            <p class="white">Pay through Mobile Balance (Telenor Logo). Telenor customers can purchase coins by their mobile balance, click above.</p>
           </div>
           <?php
           }else
@@ -76,6 +79,7 @@ include("sidebarlinks.php");
               ?>
           <div class="col-md-4" align="center"> <a href="maverick-game-user-login" rel=""><img src="assets/images/fortumo.jpg" class="img-responsive" alt="Mobile Payments by Fortumo" border="0" /> </a>
             <p class="fo24 white">Through mobile <br/>balance</p>
+            <p class="white">Pay through Mobile Balance (Telenor Logo). Telenor customers can purchase coins by their mobile balance, click above.</p>
           </div>
           <?php
           }
@@ -83,9 +87,13 @@ include("sidebarlinks.php");
           <div class="col-md-4" align="center">
 			<a href="purchase-coins"><img src="assets/images/easypaisa.jpg" class="img-responsive" alt="" /></a>
             <p class="fo24 white">Through <br/>Debit/Credit Card</p>
+            <p class="white">Pay easily via debit/credit card or pay through money transfer. Click above and follow simple instruction.
+                <br>( Coming Soon) 
+          </p>
           </div>
           <div class="col-md-4" align="center"><a href="scratch-card-payment"><img src="assets/images/scratch-card.jpg" class="img-responsive" alt="" /></a>
             <p class="fo24 white">Through Scratch <br/>Card</p>
+            <p class="white"> Scratch cards are available only at selected outlets, click above to enter scratch card number.</p>
           </div>
         </div>
       </div>

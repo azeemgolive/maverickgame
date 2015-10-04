@@ -67,29 +67,29 @@ include("sidebarlinks.php");
      
 <?php
 include("points-navigation.php");?>
-  <h3 class="heading4">Earn Points Just For Playing!</h3>
+  <h3 class="heading4">Earn Rewards By Playing Games:</h3>
   
-  <p class="white"> Maverick Rewards is a rewards program that allows you to earn points by playing your favorite games on maverickgame.com.* Dominate the competition by earning Kabam points and redeeming them for in-game currency!</p>
+  <p class="white"> Maverick Rewards are real products that you can earn by playing Maverick Games and earning points on your game score. </p>
 
-  <p class="white">Have feedback? We'd love to hear it so that we can continue to develop new features that you'll enjoy.</p>
+  <p class="white">It's a three step process <strong>Play</strong> <strong>Earn</strong> <strong>Redeem</strong> based purely on your performance. </p>
 
-  <p class="white">Participation is as easy as 1-2-3! </p>
+  <p class="white">Better you please more rewards you get. For more information please contact us at <strong>info@maverickgame.com</strong>  </p>
   <br/><br/><br/>
 
 <div class="row">
 <div class="col-md-4" align="center">
 <a href="index.php"><img src="assets/images/play.png" class="img-responsive"></a>
-<p class="line-height white">Build cities rich with resources, train troops and take up arms with allies to conquer new territories. </p>
+<p class="line-height white"> </p>
 </div>
 
 <div class="col-md-4" align="center">
 <a href="earn-rewards-points"><img src="assets/images/earn.png" class="img-responsive"></a>
-<p class="line-height white">Play every day and watch the points stack up. Want to earn bonus points? See our Earn Points page for more information! </p>
+<p class="line-height white"></p>
 </div>
 
 <div class="col-md-4" align="center">
 <a href="redeem-rewards-points"><img src="assets/images/redeem.png" class="img-responsive"></a>
-<p class="line-height white">Redeem your points for valuable in-game currency, then wreak havoc on your enemies! </p>
+<p class="line-height white"></p>
 </div>
 
 </div>

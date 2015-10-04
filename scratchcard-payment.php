@@ -99,9 +99,34 @@ include("sidebarlinks.php");
     <div class="col-md-9 col-sm-9">
       <div class="leader-wrap" style="min-height:475px;">
       <div class="col-md-12">
-        <h2>Maverick Packages</h2>
-        <h3 class="heading4">How to get a Packages</h3>
-        <p class="white">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+        <h2>Maverick Packages</h2>       
+        <p class="white">Scratch cards available in following denominations:
+            
+            Scratch cards available in following denominations:
+        <table align="center" width="30%" border="1">
+            <tr>
+                <td width="30%">Cost</td>               
+                <td width="30%">Value</td>
+            </tr>
+             <tr>
+                <td width="30%">50 Rs</td>
+               
+                <td width="30%">10 Coins</td>
+            </tr>
+             <tr>
+                <td width="30%">100 Rs</td>                
+                <td width="30%"> 20 Coins</td>
+            </tr>
+             <tr>
+                <td width="30%">500 Rs</td>               
+                <td width="30%"> 100 Coins</td>
+            </tr>
+        </table>
+	
+Please enter code in the below bar, in case your card do not work, expired or giving error please contact us at info@maverickgame.com. 
+Scratch cards currently are only available at selected outlets and gaming center
+
+             </p>
         <div class="clearfix"></div><br>
 		<div class="col-md-2"></div>
                 <?php

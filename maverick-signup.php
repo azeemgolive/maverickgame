@@ -32,14 +32,14 @@ if(isset($_POST['submit'])){
     registerNewUser($name,$email,$user_name,$password,$gender,$birth_date,$location,$phone_number,$activation,$verificationcode,$android_app);    
     $last_users=getLastRegisterUser();
     $last_user=  mysql_fetch_array($last_users);
-    $registration_points=50;
+    $registration_points=5;
     createUserGameCoins($last_user['id'],$registration_points);    
     $base_url="http://www.maverickgame.com/activation.php?code=".$activation;
     $subject="Registration successful, please activate email at Maverick Game";
     $from = "info@maverickgame.com";
     $email_server="info@maverickgame.com"; 
     $to = $email;
-    $mail_body="Dear $name,<br/><br/>You have embarked on a journey where your role will change along with the game you choose to play. From here onwards this portal is your abode and you are destined to achieve greatness. Greatness bigger than what you had fathomed this is your true calling. <br/> <br/> You are new here but remember you are the chosen one. Competition will be ruthless and the going will get difficult. You may win some and you may lose some. Your ranking is down low and reaching top will be difficult. It may take time for you to master the game but remember that greatness is achieved by perseverance and not just through talent.<br/><br/>So proceed to your first game and make your way to the top of leaderboard. Riches and glory await you, Chosen One.<br/><br/><a href=".$base_url.">.$base_url.'</a>' <br/><br/><br/></br>Regards,<br/><br/>Team Maverick Game";    
+    $mail_body="Dear $name,<br/><br/>You have embarked on a journey where your role will change along with the game you choose to play. From here onwards this portal is your abode and you are destined to achieve greatness. Greatness bigger than what you had fathomed this is your true calling. <br/> <br/> You are new here but remember you are the chosen one. Competition will be ruthless and the going will get difficult. You may win some and you may lose some. Your ranking is down low and reaching top will be difficult. It may take time for you to master the game but remember that greatness is achieved by perseverance and not just through talent.<br/><br/>So proceed to your first game and make your way to the top of leaderboard. Riches and glory await you, Chosen One.<br/><br/><a href=".$base_url.">.$base_url.</a> <br/><br/>Your game score gives you reward points, through which you can redeem real life products ranging from Mobile scratch card to a Mercedes Benz. Better you play more rewards you get !<br/></br>Regards,<br/><br/>Team Maverick Game<br><br>For any queries please write to us : info@maverickgame.com";    
     $body = wordwrap($mail_body,2000);
     //$body_user = wordwrap($mail_body_user,70);
     $headers = "MIME-Version: 1.0" . "\r\n";

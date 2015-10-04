@@ -65,14 +65,16 @@
     	
 <div class="form-container">
 	<div class="formdv">
-       <div class="col-md-12 text-center">
-       <p class="comingsoon">Maverick Rewards<br />
-       	<span>Coming soon</span></p>
+       <div class="col-md-12">
+       <p>Welcome to Maverick Game<br />
+       	<span>
+Ever wished of buying Mercedes Benz or a Kool Laptop, Well you are in the right place!
+Here you are rewarded purely on your performance in the game. Better you play more reward points you get. You can purchase real products as listed in our Rewards Store upon reaching to the desired level of points. You need coins to play game, for purchase of coins please go to <a href="game-package-payment">Buy Coins</a> section. 1 coin is for Rs.5, you can pay through your mobile phone balance, easypaisa or through Maverick Game Scratch cards.  You can view leaderboard of Game score and Points in <a href="leader-board" >Game Score</a> area.
+We wish you the very best in game performance and earning reward points. Please note that our games might take upto 3-5 mins in loading. 
+</span></p>
        </div>
 	</div>
-</div>
-        
-        
+</div>  
     </div>
 	<div class="form-handle">
     </div>

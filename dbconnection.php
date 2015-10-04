@@ -2,7 +2,7 @@
 //------------------------Variable for Server name,Database,User name,Password--------------------------------
 error_reporting(E_ALL ^ E_DEPRECATED);
 //------------------------Variable for Server name,Database,User name,Password--------------------------------
-    $adb ="maverick_games";   // database name
+    $adb ="maverick_silverhat";   // database name
     $db_server ="localhost";  // host name
     $db_user = "root"; //user name
     $db_password = ""; //password
@@ -952,7 +952,7 @@ function countWeeklyUserPointByUserId($user_id)
 function countDailyUserDailyPointByUserId($user_id)
 {
    $week_date=date("Y-m-d"); 
-   $query="select user_id,sum(total_points) as over_all_points from points_score_leaderboard where user_id=$user_id AND (createdAt='$week_date' or updatedAt='$week_date')  order by total_points DESC";
+   $query="select updatedAt,user_id,sum(total_points) as over_all_points from points_score_leaderboard where user_id=$user_id AND (createdAt='$week_date' or updatedAt='$week_date')  order by total_points DESC";
    $result=  mysql_query($query) or die(mysql_error());
    return $result;
 }
@@ -1127,5 +1127,13 @@ function getLogedUserCoins($session_id)
     $query="select fortomo_coins from user_game_coins where user_id=$session_id";
     $result=  mysql_query($query) or die(mysql_error());
     return $result;
+}
+
+//-------------------------count user points--------------------------------------------------------------------
+function countUserLeaderPointsByUserId($user_id)
+{
+    $query="select user_id,updatedAt,SUM(total_points) AS total_points from user_points where user_id=$user_id";
+    $result = mysql_query($query) or die(mysql_error());
+    return $result; 
 }
 ?>

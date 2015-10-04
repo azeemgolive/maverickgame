@@ -6,7 +6,7 @@ if(isset($_SESSION['user_loged_id']))
  $session_id= $_SESSION['user_loged_id'];
  $user_detail=getUserById($_SESSION['user_loged_id']);
  $user=  mysql_fetch_array($user_detail);  
- $user_points=countUserPointsByUserId($_SESSION['user_loged_id']);
+ $user_points=countDailyUserDailyPointByUserId($_SESSION['user_loged_id']);
  $user_point=  mysql_fetch_array($user_points);
 }else
 {
@@ -106,9 +106,9 @@ include("sidebarlinks.php");
    <div class="row">
       <div class="col-md-9">
           <h3 class="text-uppercase">My Points Account Balance </h3>
-          <p> Points add up fast so be sure to check your balance! When you've earned enough, you can redeem them for valuable in-game currency on mavericgame.com.*</p>
-          <p>Want to earn even faster? Head to our Earn Points Page to see how! </p>
-          
+          <p> Points add up fast so be sure to check your balance when you have played the game. You can redeem them for real rewards by going to rewards section</p>
+          <p>Go to reward store and see how much more points do you need to reach to desired reward. </p>
+          <p>If any queries please write to us at info@maverickgame.com </p>
           </div>
           
           <div class="col-md-3">
@@ -116,7 +116,7 @@ include("sidebarlinks.php");
          <p class="white"> Points
           <span>
               
-             <?php echo $user_point['total_points']; ?></span></p>
+             <?php echo $user_point['over_all_points']; ?></span></p>
           
           </div>
               <div class="point-date">Updated <?php echo date("d-m-Y",  strtotime($user_point['updatedAt'])); ?></div>
