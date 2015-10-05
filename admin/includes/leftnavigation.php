@@ -57,7 +57,7 @@
                 <span>Users</span>                
               </a>     
                 <ul class="treeview-menu">
-                <li><a href="users.php"><i class="fa fa-circle-o"></i> Register Users</a></li>
+                <li><a href="register-users.php"><i class="fa fa-circle-o"></i> Register Users</a></li>
                    
                 
               </ul>

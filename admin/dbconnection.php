@@ -100,4 +100,12 @@ function deleteGame($game_id)
     $query="delete from silverhat_games where game_id=$game_id";
     mysql_query($query) or die(mysql_error());
 }
+
+//--------------------maverick game Users List----------------------------------------------------
+function getAllUserList()
+{
+    $query="select id,name,email,registered from glogin_users order by id";
+    $result=mysql_query($query) or die(mysql_error());
+    return $result;
+}
 ?>
