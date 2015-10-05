@@ -17,7 +17,8 @@
                     <h4><strong></strong></h4>
                      <ul>
                      <li><a href="about-us">About US</a></li> 
-                     <li><a href="blog">Blog</a></li>
+                     <li><a href="maverickgame-blog">Blog</a></li>
+                     <li><a href="maverick-faq">FAQ's</a></li>
                          <li><a href="contact-us">Contact US</a></li>  
                     </ul>
               </div>

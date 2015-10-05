@@ -40,7 +40,7 @@ if(count($links)==2)
                         <li <?php if($seo=="maverick-games"){ ?> class="active" <?php }?>><a  href="maverick-games">Games</a></li>
                          <li <?php if($seo=="leader-board"){ ?>class="active" <?php }?>><a  href="leader-board">Game Score</a></li>   
                          <li <?php if($seo=="game-package-payment"){ ?>class="active" <?php }?>><a  href="game-package-payment">Buy Coins</a></li>     
-                          <li <?php if($seo=="maverick-game-dicussion-forum"){ ?> class="active" <?php }?>><a  href="maverick-game-dicussion-forum">Game Forum</a></li>
+                          <li <?php if($seo=="game-dicussion-forums"){ ?> class="active" <?php }?>><a  href="game-dicussion-forums">Game Forum</a></li>
                           
                            <li <?php if($seo=="about-us"){ ?> class="active" <?php }?>><a  href="about-us">About US</a></li>
                            

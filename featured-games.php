@@ -21,7 +21,7 @@
                         	<div class="box wow bounceInDown">
                             	
                                 <div class="border-line">
-                                <a  href="maverick-game-dicussion-forums">
+                                <a  href="game-dicussion-forums">
                                     <img src="assets/images/box2.jpg" class="img-responsive" alt="Box Image" height="145" width="299">
                                 </a>
                                     </div>

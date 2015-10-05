@@ -62,9 +62,37 @@ include("sidebarlinks.php");
     <div class="col-md-9 col-sm-9">
       <div class="leader-wrap" style="min-height:575px;">
       <div class="col-md-12">
-       
-          <h3 style="padding-left: 200px; font-weight:bold; font-size: 50px;padding-top: 100px; ">Coming <span>Soon</span></h3>   
-             
+        <h2>Maverick Packages</h2>
+        <h3 class="heading4">How to get a Packages</h3>
+        <p class="white">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+        
+       <?php 
+       $game_packages=  getMaverickGamePackages();
+       if($game_packages>0)
+       {
+           while($game_package=  mysql_fetch_array($game_packages))
+           {
+      ?>
+        <div class="col-md-4">
+          <div class="packages">
+            <div class="coin-wrap">
+              <div class="coin">  <br/>
+                <span>coins</span><?php echo $game_package['package_coins']; ?> </div>
+              <div class="rupees"> <?php echo $game_package['package_price']; ?> <br/>
+                <span>r.s.</span> </div>
+                <img class="img-responsive" src="game_packages/<?php echo $game_package['package_image']; ?>" alt="" >
+            </div>
+              <form method="post" action="payment-process.php">
+                  <input type="hidden" name="package_id" id="package_id" value="<?php echo $game_package['package_id']; ?>">						  
+                  <input type="image" src="assets/images/buy-now.jpg" name="submit" value="Buy Now" class="img-responsive btn-buy-coins">
+            </form>
+              <p class="white"> <?php echo $game_package['package_description']; ?></p>
+          </div>
+        </div>
+      <?php  
+           }
+       }
+       ?>        
       </div></div>
     </div>
 

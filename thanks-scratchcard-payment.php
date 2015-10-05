@@ -69,7 +69,7 @@ include("sidebarlinks.php");
       
           
        <div class="col-md-12">
-        <h2>Thnak You</h2>
+        <h2>Thank You</h2>
         <h3 class="white text-center">You have successfully purchase <?php echo $_SESSION['coins']; ?> Coins</h3>
       </div>      
       </div>

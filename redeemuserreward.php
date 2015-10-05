@@ -22,7 +22,7 @@ $subject="Maverick Game Rewards Redeem Details";
     $from = "info@maverickgame.com";
     $email_server="info@maverickgame.com"; 
     $to = $user_email;
-    $mail_body="Dear $username,<br/><br/>You have request for  maverick reward $reward_name for  $reward_point will be deducted from your total points at Maverick game.  <br><br>Your request is submited our Team will contact you in 48 hours. <br/> <br/> Regards,<br/><br/>Team Maverick Game";    
+    $mail_body="Dear $username,<br/><br/>Your request of maverick reward has been received our team will contact you in 48 hours during weekdays for any queries or cancellation of this reward please write to us with in 24 hrs at <strong>info@maverickgame.com</strong>.<br>We wish you best of luck on better game performance and more rewards in future. Keep Playing Keep Winning.  <br/> <br/> Regards,<br/><br/>Team Maverick Game";    
     $body = wordwrap($mail_body,2000);
     //$body_user = wordwrap($mail_body_user,70);
     $headers = "MIME-Version: 1.0" . "\r\n";
@@ -33,4 +33,3 @@ $subject="Maverick Game Rewards Redeem Details";
     //------------------------Thanks You Email-------------------------------------------------------------------        
     mail($to,$subject,$mail_body,$headers);    
 ?>
-

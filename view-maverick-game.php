@@ -76,7 +76,7 @@ include("caution.php");
      <div class="col-md-11 col-sm-11">
      <div class="leader-wrap" style="min-height:650px;">
       <div class="gaming-pic"> 
-  <img src="silverhat_games/game_instrustion_image/<?php echo $game_detail['game_instrustion_image'];?>" alt="gaming" height="520" width="1011">
+  <img src="silverhat_games/game_image/<?php echo $game_detail['game_image'];?>" alt="gaming" height="520" width="1011">
   
   <div class="game-start">
   

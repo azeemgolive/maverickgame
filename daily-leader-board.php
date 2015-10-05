@@ -80,7 +80,7 @@ include("sidebarlinks.php");
         <div class="score-tabs">
         <div class="col-md-2"></div>
             <div class="col-md-8"><ul class="gamepoint">
-            <li><a href="game-point-leader-board">All Time </a></li>
+        	<li><a href="game-point-leader-board">All Time </a></li>
             <li><a href="game-point-weekly-leader-board">This Week</a></li>
             <li><a href="game-point-daily-leader-board">Today </a></li>
           </ul></div>

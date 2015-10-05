@@ -99,10 +99,12 @@ include("sidebarlinks.php");
     <div class="col-md-9 col-sm-9">
       <div class="leader-wrap" style="min-height:475px;">
       <div class="col-md-12">
-        <h2>Maverick Packages</h2>       
-        <p class="white">Scratch cards available in following denominations:
+        <h2>Card Payment</h2>       
+        <p class="white">
             
             Scratch cards available in following denominations:
+            <br>
+            <br>
         <table align="center" width="30%" border="1">
             <tr>
                 <td width="30%">Cost</td>               
@@ -122,9 +124,9 @@ include("sidebarlinks.php");
                 <td width="30%"> 100 Coins</td>
             </tr>
         </table>
-	
+	<br>
 Please enter code in the below bar, in case your card do not work, expired or giving error please contact us at info@maverickgame.com. 
-Scratch cards currently are only available at selected outlets and gaming center
+<br><br>Scratch cards currently are only available at selected outlets and gaming center
 
              </p>
         <div class="clearfix"></div><br>

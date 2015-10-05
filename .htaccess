@@ -61,7 +61,9 @@ RewriteRule ^scratch-card-payment$ scratchcard-payment.php [L]
 RewriteRule ^thanks-scratchcard-payment$ thanks-scratchcard-payment.php [L] 
 RewriteRule ^maverick-faq$ maverickgame-faq.php [L] 
 RewriteRule ^terms-conditions$ terms-and-conditions.php [L] 
-RewriteRule ^maverick-games$ maverick-games.php [L] 
+RewriteRule ^maverick-games$ maverick-games.php [L]
+RewriteRule ^maverickgame-blog$ maverickgame-blog.php [L]
+RewriteRule ^game-dicussion-forums$ game-dicussion-forums.php [L]
 
 
 

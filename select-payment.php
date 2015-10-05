@@ -79,7 +79,7 @@ include("sidebarlinks.php");
               ?>
           <div class="col-md-4" align="center"> <a href="maverick-game-user-login" rel=""><img src="assets/images/fortumo.jpg" class="img-responsive" alt="Mobile Payments by Fortumo" border="0" /> </a>
             <p class="fo24 white">Through mobile <br/>balance</p>
-            <p class="white">Pay through Mobile Balance (Telenor Logo). Telenor customers can purchase coins by their mobile balance, click above.</p>
+            <p class="white">Pay through Mobile Balance. Telenor customers can purchase coins by their mobile balance, click above.</p>
           </div>
           <?php
           }

@@ -3,6 +3,7 @@ session_start();
   include("dbconnection.php");
   $sender = $_GET['sender'];//phone num.
   $amount = $_GET['amount'];//credit
+  $_SESSION['amount']=$amount;
   $cuid = $_GET['cuid'];//resource i.e. user
   if(preg_match("/completed/i", $_GET['status'])) {
   $result        =  getUserGameCoins($cuid);

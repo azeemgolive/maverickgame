@@ -3,9 +3,7 @@ session_start();
 include("dbconnection.php");
 if(isset($_SESSION['user_loged_id']))
 {
- $session_id= $_SESSION['user_loged_id'];
- $user_coins=getLogedUserCoins($session_id);
- $user_coin=  mysql_fetch_array($user_coins);
+ $session_id= $_SESSION['user_loged_id']; 
 }else
 {
     header("location:maverick-game-user-login");
@@ -74,15 +72,20 @@ include("sidebarlinks.php");
         <h2>Thank You</h2>
         <h3 class="white text-center">
             <?php
+            $session_id= $_SESSION['user_loged_id']; 
+            $user_coins=getLogedUserCoins($session_id);
+            $user_coin=  mysql_fetch_array($user_coins);
             if($user_coin['fortomo_coins']>0)
             {
             ?>            
-            You have successfully purchase <?php echo $user_coin['fortomo_coins']; ?> Coins.
+            You have successfully purchase Coins, Proceed to games and win rewards points through your games score,<br>
+			Best of Luck
            <?php
             }else
             {
            ?>
-            You have not pay successfully
+             You have successfully purchase Coins, Proceed to games and win rewards points through your games score,<br>
+			Best of Luck
          <?php   
             }
            ?>

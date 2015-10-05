@@ -43,11 +43,11 @@ $_SESSION['loged_user_image']=$user['photo'];
 <!DOCTYPE HTML>
 <html>
 <head>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maverick Game</title>
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
