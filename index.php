@@ -21,16 +21,16 @@ if($interval->format('%d')>1)
    {
       if($user_points['heightest_score_coins']<1)
       {
-       $heightest_score_point=100;          
+       $heightest_score_point=10;          
       $total_points=$user_points['total_coins']+$heightest_score_point;
       updateUserCoins($user_id,$heightest_score_point,$total_points);
       }else {
-      $heightest_score_point=100;        
+      $heightest_score_point=10;        
       $total_points=$heightest_score_point;
       updateUserCoins($user_id,$heightest_score_point,$total_points);
       }
    }  else {      
-      $heightest_score_point=100;
+      $heightest_score_point=10;
       $total_points=$heightest_score_point;  
       createUserHightScoreCoins($user_id,$heightest_score_point,$total_points);
    }
