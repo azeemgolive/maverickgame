@@ -139,7 +139,7 @@ if(isset($_SESSION['loged_user_name']))echo $_SESSION['loged_user_name'];
     </div>
 </section>
 <div class="newweb">
-<p class="white text-center"><strong>We are working on New Website</strong></p>
+<p class="white text-center"><strong>This website is under construction</strong></p>
 </div>
 
     
