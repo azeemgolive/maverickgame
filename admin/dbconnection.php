@@ -108,4 +108,18 @@ function getAllUserList()
     $result=mysql_query($query) or die(mysql_error());
     return $result;
 }
+//----------------------Delete User---------------------------------------------------------
+function deleteUser($id)
+{
+    $query="delete from glogin_users where id=$id";
+    mysql_query($query) or die(mysql_error());
+}
+
+//----------------------Delete User---------------------------------------------------------
+function getUserById($user_id)
+{
+    $query="select name,email from glogin_users where id=$user_id";
+   $result=mysql_query($query) or die(mysql_error());
+    return $result;
+}
 ?>

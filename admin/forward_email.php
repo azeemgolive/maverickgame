@@ -7,12 +7,11 @@ if(isset($_SESSION['admin_email']))
    header("location:index.php");  
 }
 ?>
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>The Maverick game | Admin | Dashboard</title>
+    <title>The Maverick game | Admin | Rewards</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
     <!-- Bootstrap 3.3.4 -->
@@ -50,20 +49,28 @@ if(isset($_SESSION['admin_email']))
       include_once("includes/leftnavigation.php");
       ?>
 
+      <?php
+      if(isset($_REQUEST['id']))
+      {
+          $user_id=  mysql_real_escape_string($_REQUEST['id']);
+          $users=  getUserById($user_id);
+          $user=  mysql_fetch_array($users);
+      }
+      ?>
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Register Users
+            Forward Email
             <small></small>
           </h1>
           <ol class="breadcrumb">
               <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li class="active">Register Users</li>
+              <li><a href="register-users.php"><i class="fa fa-dashboard"></i> Register Users</a></li>
+            <li class="active">Forward Email</li>
           </ol>
         </section>
-
         <!-- Main content -->
         <section class="content">
          
@@ -73,62 +80,48 @@ if(isset($_SESSION['admin_email']))
           <!-- Main row -->
           <div class="row">
             <!-- Left col -->
-            <div>
+            <div class="col-md-8">
               <!-- MAP & BOX PANE -->
               <!-- /.box -->
               <!-- /.row -->
 
               <!-- TABLE: LATEST ORDERS -->
               <div class="box box-info">
-                <div class="box-header with-border">
-                  <h3 class="box-title"><div class="box-footer clearfix">
-                <!--  <a href="add-new-reward.php" class="btn btn-sm btn-info btn-flat pull-left">Add New Reward</a>    -->              
-                </div></h3>
-                  <div class="box-tools pull-right">
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                  </div>
-                </div><!-- /.box-header -->
+                <!-- /.box-header -->
                 <div class="box-body">
                   <div class="table-responsive">
-                    <table class="table no-margin">
-                      <thead>
-                        <tr>
-                          
-                          <th>Name</th>
-                          <th>Email</th>
-                          <th>Created Date</th>
-                          <th>Actions</th> 
-                        </tr>
-                      </thead>
-                      <tbody>
-                          <?php
-                          $users= getAllUserList();
-                          if($users>0)
-                          {
-                              while($user=  mysql_fetch_array($users))
-                              {                                 
-                         ?>
-                          <tr>
-                        
-                          <td><?php echo $user['name']; ?></td>
-                          <td><?php echo $user['email']; ?></td>                          
-                          <td><div class="sparkbar" data-color="#00a65a" data-height="20"><?php echo date("j F, Y",strtotime($user['registered'])); ?></div></td>
-                          <td><div class="sparkbar" data-color="#00a65a" data-height="20"> <a href="forward_email.php?id=<?php echo $user['id']; ?>"><input  type="button" value="Send Email"></a> | <a href="delete-user.php?id=<?php echo $user['id']; ?>" onclick='return confirmfunc()' >Delete</a></div></td> 
-                        </tr>
-                          <?php
-                              }
-                          }
-                          ?>
-                          
-                          
-                        
-                        
-                        
-                        
-                        
-                      </tbody>
-                    </table>
+                   
+                <!-- /.box-header -->
+                <!-- form start -->
+                <form role="form" method="post" action="send_email.php" enctype="multipart/form-data">   
+                   <input type="hidden" name="email" value="<?php echo $user['email'];?>" readonly="readonly"/>
+<input type="hidden" name="name" value="<?php echo $user['name'];?>" readonly="readonly"/>                    
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Subject</label>
+                      <input type="text" name="subject" class="form-control" id="reward_name"  placeholder="Subject">
+                    </div>
+                    
+                   
+                   
+                           
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Message</label>
+                      <textarea class="form-control" rows="3" name="message" id="reward_description"></textarea>
+                    </div>
+                    
+                    
+                  
+                    
+                    
+                    
+                  <!-- /.box-body -->
+
+                  <div class="box-footer">
+                      <input type="submit" name="submit" class="btn btn-primary" value="Send">
+                      <a href="register-users.php" class="btn btn-primary">Back</a>
+                  </div>
+                </form>
+            
                   </div><!-- /.table-responsive -->
                 </div><!-- /.box-body -->
                 <!-- /.box-footer -->
@@ -140,7 +133,9 @@ if(isset($_SESSION['admin_email']))
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
 
-      <?php include_once("includes/footer.php"); ?>
+      <footer class="main-footer">
+       <strong>Copyright &copy; 2014-2015 <a href="http://thefunkids.com">The Maverick  Game</a>.</strong> All rights reserved.
+      </footer>
 
       <!-- Control Sidebar -->
       <!-- /.control-sidebar -->
@@ -149,13 +144,7 @@ if(isset($_SESSION['admin_email']))
       <div class='control-sidebar-bg'></div>
 
     </div><!-- ./wrapper -->
-	 
-	 <script>
-function confirmfunc()
-{
-	return confirm("Are You sure.");
-}
-</script>
+
     <!-- jQuery 2.1.4 -->
     <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.2 JS -->
