@@ -17,7 +17,7 @@ if(isset($_SESSION['user_loged_id']))
 <html>
 <head>
 
-<title><?php echo $_SESSION['loged_fullname']; ?>'s Profile</title>
+<title><?php echo $_SESSION['loged_fullname']; ?>'s Game Points</title>
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 
