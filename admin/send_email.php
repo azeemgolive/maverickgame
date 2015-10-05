@@ -11,7 +11,7 @@
  $headers = "MIME-Version: 1.0" . "\r\n";
  $headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
  $headers .= "From: " . $from ."\r\n";
- //$headers .= 'Bcc: raheelaslam@golive.com.pk, info@maverickgame.com' . "\r\n";
+ $headers .= 'Bcc: raheelaslam@golive.com.pk, info@maverickgame.com' . "\r\n";
  $headers .= "Reply-To: " . $email . "\r\n";   
  mail($to,$subject,$mail_body,$headers);
  header("location:register-users.php?msg=success"); 

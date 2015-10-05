@@ -72,10 +72,12 @@ if(isset($_SESSION['admin_email']))
           </ol>
         </section>
         <!-- Main content -->
+        
+        
         <section class="content">
          
 
-          
+      
 
           <!-- Main row -->
           <div class="row">
@@ -90,6 +92,8 @@ if(isset($_SESSION['admin_email']))
                 <!-- /.box-header -->
                 <div class="box-body">
                   <div class="table-responsive">
+                      
+                      <center> <span>Message Forward To <?php echo $user['name'];?></span> </center>
                    
                 <!-- /.box-header -->
                 <!-- form start -->
@@ -110,10 +114,7 @@ if(isset($_SESSION['admin_email']))
                     </div>
                     
                     
-                  
-                    
-                    
-                    
+
                   <!-- /.box-body -->
 
                   <div class="box-footer">
