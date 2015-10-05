@@ -98,7 +98,7 @@ if(isset($_SESSION['admin_email']))
 <input type="hidden" name="name" value="<?php echo $user['name'];?>" readonly="readonly"/>                    
                     <div class="form-group">
                       <label for="exampleInputEmail1">Subject</label>
-                      <input type="text" name="subject" class="form-control" id="reward_name"  placeholder="Subject">
+                      <input type="text" name="subject" required class="form-control" id="reward_name"  placeholder="Subject">
                     </div>
                     
                    
@@ -106,7 +106,7 @@ if(isset($_SESSION['admin_email']))
                            
                     <div class="form-group">
                       <label for="exampleInputEmail1">Message</label>
-                      <textarea class="form-control" rows="3" name="message" id="reward_description"></textarea>
+                      <textarea class="form-control" required rows="3" name="message" id="reward_description"></textarea>
                     </div>
                     
                     

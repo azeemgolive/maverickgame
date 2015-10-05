@@ -14,5 +14,5 @@
  //$headers .= 'Bcc: raheelaslam@golive.com.pk, info@maverickgame.com' . "\r\n";
  $headers .= "Reply-To: " . $email . "\r\n";   
  mail($to,$subject,$mail_body,$headers);
- header("location:register-users.php?success"); 
+ header("location:register-users.php?msg=success"); 
 ?>

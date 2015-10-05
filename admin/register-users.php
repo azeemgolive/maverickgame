@@ -67,7 +67,7 @@ if(isset($_SESSION['admin_email']))
         <!-- Main content -->
         <section class="content">
          
-
+            
           
 
           <!-- Main row -->
@@ -80,8 +80,16 @@ if(isset($_SESSION['admin_email']))
 
               <!-- TABLE: LATEST ORDERS -->
               <div class="box box-info">
+                 
                 <div class="box-header with-border">
                   <h3 class="box-title"><div class="box-footer clearfix">
+                          
+                  <?php
+                    if(isset($_REQUEST['msg']))
+                    { ?>
+                          <span style="color:green"> Message Sended</span>
+                 <?php }
+                  ?>
                 <!--  <a href="add-new-reward.php" class="btn btn-sm btn-info btn-flat pull-left">Add New Reward</a>    -->              
                 </div></h3>
                   <div class="box-tools pull-right">
