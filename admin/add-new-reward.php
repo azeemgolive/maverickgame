@@ -89,12 +89,11 @@ if(isset($_SESSION['admin_email']))
                     <div class="form-group">
                       <label for="exampleInputEmail1">Reward Name</label>
                       <input type="text" name="reward_name" class="form-control" id="product_name" placeholder="Enter reward name">
-                    </div>
-                    
+                    </div>                    
                    
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Reward Price</label>
-                      <input type="text" name="reward_price" class="form-control" id="product_name" placeholder="Enter reward price">
+                      <label for="exampleInputEmail1">Reward points</label>
+                      <input type="text" name="reward_price" class="form-control" id="product_name" placeholder="Enter reward reward points">
                     </div>
                            
                     <div class="form-group">

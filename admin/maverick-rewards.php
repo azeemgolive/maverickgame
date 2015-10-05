@@ -96,7 +96,7 @@ if(isset($_SESSION['admin_email']))
                         <tr>
                           <th>Reward Id</th>
                           <th>Reward Name</th>
-                          <th>Reward Price</th>
+                          <th>Reward Points</th>
                           <th>Created At</th>
                           <th>Actions</th>
                         </tr>
