@@ -3,6 +3,7 @@ session_start();
 header("Content-Type: application/json");
 include("../dbconnection.php");
 $_SESSION['user_loged_id']=34;
+$total_coins=0;
 if(isset($_SESSION['user_loged_id']))
 {
 	$user_id=$_SESSION['user_loged_id'];
@@ -19,7 +20,7 @@ if(isset($_SESSION['user_loged_id']))
         }  else {
           $user_data=array(
         'user_id'=>$user_id,
-        'total_coins'=>0,
+        'total_coins'=>"$total_coins",
         'status'=>'1' 
         );
          echo json_encode($user_data);  
