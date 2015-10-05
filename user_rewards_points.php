@@ -6,14 +6,13 @@ if(isset($_SESSION['user_loged_id']))
  $session_id= $_SESSION['user_loged_id'];
  $user_detail=getUserById($_SESSION['user_loged_id']);
  $user=  mysql_fetch_array($user_detail);  
- $user_points=countDailyUserDailyPointByUserId($_SESSION['user_loged_id']);
+ $user_points=countUserPointByUserId($_SESSION['user_loged_id']);
  $user_point=  mysql_fetch_array($user_points);
 }else
 {
     header("location:maverick-game-user-login");
 }
-?>
-    
+?>    
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -119,7 +118,7 @@ include("sidebarlinks.php");
              <?php echo $user_point['over_all_points']; ?></span></p>
           
           </div>
-              <div class="point-date">Updated <?php echo date("d-m-Y",  strtotime($user_point['updatedAt'])); ?></div>
+              <div class="point-date">Updated <?php echo date("d-m-Y"); ?></div>
           </div>
           
           <div class="col-md-12">
@@ -142,7 +141,7 @@ include("sidebarlinks.php");
              
              ?>
                 <tr>
-                    <td><?php echo date("d-m-y",  strtotime($points_user['createdAt'])); ?></td>
+                    <td><?php echo date("d-m-y",  strtotime($points_user['updatedAt'])); ?></td>
                 <td>Played game 
                 <?php
                  $game_info=  getGameById($points_user['game_id']);

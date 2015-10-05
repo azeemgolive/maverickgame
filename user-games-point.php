@@ -12,8 +12,7 @@ if(isset($_SESSION['user_loged_id']))
 {
     header("location:maverick-game-user-login");
 }
-?>
-    
+?>    
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -142,7 +141,7 @@ include("sidebarlinks.php");
              
              ?>
                 <tr>
-                    <td><?php echo date("d-m-y",  strtotime($points_user['createdAt'])); ?></td>
+                    <td><?php echo date("d-m-y",  strtotime($points_user['updatedAt'])); ?></td>
                 <td>Played game 
                 <?php
                  $game_info=  getGameById($points_user['game_id']);

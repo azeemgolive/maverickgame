@@ -1136,4 +1136,17 @@ function countUserLeaderPointsByUserId($user_id)
     $result = mysql_query($query) or die(mysql_error());
     return $result; 
 }
+//------------------------------get today leader board-------------------------------------------------
+function getCurrentPointsLeaderBoard()
+{
+    $query="select user_id,point_leader_id,createdAt,updatedAt,total_points,current_point from points_score_leaderboard";
+    $result = mysql_query($query) or die(mysql_error());
+    return $result; 
+}
+//----------------------------update points leader board--------------------------------------------
+function updateCurrentLeaderBoard()
+{
+    $query="update points_score_leaderboard set current_point=0";
+    mysql_query($query) or die(mysql_error());
+}
 ?>

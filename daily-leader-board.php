@@ -1,6 +1,19 @@
 <?php
 session_start();
 include("dbconnection.php");
+$current_leader=getCurrentPointsLeaderBoard();
+if($current_leader>0)
+{
+    while($leader=  mysql_fetch_array($current_leader))
+    {
+    $today = date("Y-m-d");
+    $createdAt = date("Y-m-d",  strtotime($leader['createdAt'])); 
+    $updatedAt = date("Y-m-d",  strtotime($leader['updatedAt'])); 
+}
+if($today > $createdAt and $today > $updatedAt) { 
+    updateCurrentLeaderBoard();
+}
+}        
 ?>
 <!DOCTYPE HTML>
 <html>
