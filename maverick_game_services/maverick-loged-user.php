@@ -21,12 +21,14 @@ if(isset($_REQUEST['game_score']))
    if($point_leaderboard['point_leader_id']<1)
    {
        $points_leaderboard_score=$total_points;
-       addNewPointLeaderBoard($user_id,$points_leaderboard_score);
+       $current_point=$total_points;
+       addNewPointLeaderBoard($user_id,$points_leaderboard_score,$current_point);
         
    }else
    {    
        $points_leaderboard_score=$point_leaderboard['total_points']+$total_points;
-       updatePointLeaderBoard($user_id,$points_leaderboard_score);
+       $current_point=$point_leaderboard['current_point']+$total_points;
+       updatePointLeaderBoard($user_id,$points_leaderboard_score,$current_point);
    }
    if($game_leaderboard['leader_board_id']>0)
    {

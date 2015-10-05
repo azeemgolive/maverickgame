@@ -807,23 +807,23 @@ function updateGameScoreLeaderBoard($user_id,$game_score)
 //-----------------------get points leader board by user id--------------------------------------------------
 function getPointsLeaderBoardByUserId($user_id)
 {
-   $query="select user_id,point_leader_id,createdAt,updatedAt,total_points from points_score_leaderboard where user_id=$user_id";
+   $query="select user_id,point_leader_id,createdAt,updatedAt,total_points,current_point from points_score_leaderboard where user_id=$user_id";
    $result=  mysql_query($query) or die(mysql_error());
    return $result;
 }
 //------------------------------------ add new point leader board---------------------------------------------
-function addNewPointLeaderBoard($user_id,$leader_borad_score)
+function addNewPointLeaderBoard($user_id,$leader_borad_score,$current_point)
 {
     $createdAt = date("Y-m-d");
     $updatedAt = date("Y-m-d");
-    $query="insert into points_score_leaderboard(user_id,createdAt,updatedAt,total_points) values ($user_id,'$createdAt','$updatedAt',$leader_borad_score)";
+    $query="insert into points_score_leaderboard(user_id,createdAt,updatedAt,total_points,current_point) values ($user_id,'$createdAt','$updatedAt',$leader_borad_score,$current_point)";
     mysql_query($query)or die(mysql_error());     
 }
 //----------------------------update points leader board-----------------------------------------------------
-function updatePointLeaderBoard($user_id,$leader_borad_score)
+function updatePointLeaderBoard($user_id,$leader_borad_score,$current_point)
 {
     $updatedAt = date("Y-m-d");
-    $query="update points_score_leaderboard set total_points=$leader_borad_score,updatedAt='$updatedAt' where user_id=$user_id";
+    $query="update points_score_leaderboard set total_points=$leader_borad_score,current_point=$current_point,updatedAt='$updatedAt' where user_id=$user_id";
     mysql_query($query)or die(mysql_error());
 }
 //----------------------------get game score leader board------------------------------------------------------
@@ -877,11 +877,11 @@ function getWeeklyPointLeaderBoard()
 function getDailyPointsLeaderBoard()
 {
     $week_date=date("Y-m-d");
-    $query="SELECT psl.user_id AS user_id,gu.user_name AS user_name,gu.photo  AS user_image,psl.total_points AS total_points
+    $query="SELECT psl.user_id AS user_id,gu.user_name AS user_name,gu.photo  AS user_image,psl.current_point AS total_points
     FROM
     points_score_leaderboard psl
     INNER JOIN glogin_users gu
-        ON (psl.user_id = gu.id) where psl.createdAt='$week_date' or psl.updatedAt='$week_date' ORDER BY total_points DESC";
+        ON (psl.user_id = gu.id) where psl.createdAt='$week_date' or psl.updatedAt='$week_date' ORDER BY current_point DESC";
     $result=  mysql_query($query) or die(mysql_error());
    return $result;
 }
@@ -952,7 +952,7 @@ function countWeeklyUserPointByUserId($user_id)
 function countDailyUserDailyPointByUserId($user_id)
 {
    $week_date=date("Y-m-d"); 
-   $query="select updatedAt,user_id,sum(total_points) as over_all_points from points_score_leaderboard where user_id=$user_id AND (createdAt='$week_date' or updatedAt='$week_date')  order by total_points DESC";
+   $query="select updatedAt,user_id,sum(current_point) as over_all_points from points_score_leaderboard where user_id=$user_id AND (createdAt='$week_date' or updatedAt='$week_date')  order by total_points DESC";
    $result=  mysql_query($query) or die(mysql_error());
    return $result;
 }
@@ -1020,7 +1020,7 @@ function getWeelyPointsUserRank($userId){
 function geDailyPointsUserRank($userId){
     $week_date=date('Y-m-d', strtotime('-7 days'));
    // no limit they did the query to get all result
-  $sql     =  "SELECT user_id FROM points_score_leaderboard where createdAt='$week_date' or updatedAt='$week_date' ORDER BY total_points DESC";
+  $sql     =  "SELECT user_id FROM points_score_leaderboard where createdAt='$week_date' or updatedAt='$week_date' ORDER BY current_point DESC";
    $result =  mysql_query($sql);
    $rows  =  ''; 
    $data = array();
