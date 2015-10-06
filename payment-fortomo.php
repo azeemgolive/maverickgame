@@ -11,13 +11,14 @@ session_start();
   if($user_coins['total_coins']>0){
   $total_coins   =  $user_coins['total_coins']+$amount;
   $updatedAt= date("Y-m-d");   
-  $query="update user_game_coins set total_coins=$total_coins where user_id=$cuid";
+  $query="update user_game_coins set total_coins=$total_coins,fortomo_coins=$amount where user_id=$cuid";
   mysql_query($query) or die(mysql_error());
   }else
   {
-  $total_coins   =  $user_coins['total_coins']+$amount;
-  $updatedAt= date("Y-m-d");   
-  createUserGameCoins($cuid,$total_coins); 
+  $createdAt= date("Y-m-d"); 
+  $updatedAt= date("Y-m-d"); 
+  $query="insert into  user_game_coins (user_id,createdAt,total_coins,fortomo_coins) vaues($cuid,'$createdAt',$amount,$amount)";
+  mysql_query($query) or die(mysql_error());
   }
   } 
   

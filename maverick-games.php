@@ -215,65 +215,53 @@ include("sidebarlinks.php");
 <!-- Portfolio 4 Column start -->
     <div class="image_grid portfolio_4col">
     <ul id="list" class="portfolio_list da-thumbs">
-    <li>
-            <img width="200" src="silverhat_games/game_image/dothedive.png" class="img-responsive" alt="">
+    <?php
+      $maverickgames=  getAllMaverickGames();
+      if($maverickgames>0)
+      {
+          while($maverickgame=  mysql_fetch_array($maverickgames)){
+     ?>
+        
+        
+        <li style="min-height:140px">
+            <img width="200" src="silverhat_games/game_image/<?php echo $maverickgame['game_image']; ?>" class="img-responsive" alt="">
             <article class="da-animate da-slideFromRight" style="display: block;">
-                <h3>Do The Dive</h3>
+                <h3><?php echo $maverickgame['game_name']; ?></h3>
                 <em></em>
-                <span class="link_post"><a href="maverick-game-do-the-dive"></a></span>
-                <span class="zoom"><a href="DoTheDive/dothedrive.php"></a></span>
+                <span class="link_post"><a href="maverick-game-<?php echo $maverickgame['game_seo']; ?>"></a></span>
+                <?php
+                if(isset($_SESSION['user_loged_id']))
+                {
+                ?>
+                <span class="zoom"><a href="<?php echo $maverickgame['game_file']; ?>"></a></span>
+             <?php
+                }else
+                {
+                ?>
+                <span class="zoom"><a href="maverick-game-user-login"></a></span>
+                <?php
+                }
+                ?>
             </article>
-            <div class="clearfix"></div><br>
-            <h3>Do The Dive</h3>
+            <div class="clearfix"></div>
+            <h3><?php echo $maverickgame['game_name']; ?></h3>
         </li>
         
-        <li>
-             <img width="200" src="silverhat_games/game_image/furiousred.png" class="img-responsive" alt="">
-            <article class="da-animate da-slideFromTop" style="display: block;">
-                <h3>Furious Red</h3>
-                <em></em>
-                <span class="link_post"><a href="maverick-game-furious-red"></a></span>
-                <span class="zoom"><a href="FuriousRed/furiousred.php"></a></span>
-            </article>
-            <div class="clearfix"></div><br>
-            <h3>Furious Red</h3>
-        </li>
+    <?php    
+          }
+      }
+    ?>
         
-        <li>
-            <img width="200" src="silverhat_games/game_image/master-cook.png" class="img-responsive" alt="">
-            <article class="da-animate da-slideFromLeft" style="display: block;">
-                <h3>Master cook</h3>
-                <em></em>
-                <span class="link_post"><a href="maverick-game-master-cook"></a></span>
-                <span class="zoom"><a href="MasterCook/mastercook.php"></a></span>
-            </article>
-            <div class="clearfix"></div><br>
-            <h3>Master cook</h3>
-        </li>
         
-        <li>
-            <img width="200" src="silverhat_games/game_image/wordster.png" class="img-responsive" alt="">
-            <article class="da-animate da-slideFromRight" style="display: block;">
-                <h3>Wordster</h3>
-                <em></em>
-                <span class="link_post"><a href="maverick-game-word-ster"></a></span>
-                <span class="zoom"><a href="Wordster/wordster.php"></a></span>
-            </article>
-            <div class="clearfix"></div><br>
-			<h3>Wordster</h3>
-        </li>
+    
         
-        <li>
-            <img width="200" src="silverhat_games/game_image/dragondraft.png" class="img-responsive" alt="">
-            <article class="da-animate da-slideFromRight" style="display: block;">
-                <h3>Dragon Draft</h3>
-                <em></em>
-                <span class="link_post"><a href="maverick-game-dragon-draft"></a></span>
-                <span class="zoom"><a href="DragonDraft/dragondraft.php"></a></span>
-            </article>
-            <div class="clearfix"></div><br>
-			<h3>Dragon Draft</h3>
-        </li>
+        
+        
+        
+        
+        
+        
+        
 
     </ul>
     </div>

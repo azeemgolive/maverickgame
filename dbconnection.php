@@ -278,7 +278,7 @@ function getGamesBySearch($search_name)
 //-----------------------------get All Maverick Games---------------------------------------------------------
 function getAllMaverickGames()
 {
-    $query="SELECT game_id, game_name, game_image, game_home_image,game_background_image, game_description, game_file, isActive, createdAt, updatedAt, isFeatured, game_seo, meta_tag_keywords, meta_tag_description,game_top_header,game_leaderboard_image,game_instrustion_image FROM silverhat_games";  
+  $query="SELECT game_id, game_name, game_image, game_home_image,game_background_image, game_description, game_file, isActive, createdAt, updatedAt, isFeatured, game_seo, meta_tag_keywords, meta_tag_description,game_top_header,game_leaderboard_image,game_instrustion_image FROM silverhat_games order by game_id DESC";  
   $result=  mysql_query($query) or die(mysql_error());
   return $result; 
 }
